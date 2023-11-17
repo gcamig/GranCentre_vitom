@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">GranCentre_vitom</string>
+    <string name="contentDescHotels">Hotel image</string>
+    <string name="contentDescMovies">Movie image</string>
+    <string name="contentDescRestaurants">Restaurant image</string>
+    <string name="contentDescTransport">Transport image</string>
+    <string name="contentDescBussiness">Bussiness image</string>
+    <string name="contentDescEvents">Events image</string>
 </resources>
