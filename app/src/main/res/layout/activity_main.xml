@@ -19,7 +19,7 @@
             android:src="@drawable/hotels"
             android:contentDescription="@string/contentDescHotels"
             android:layout_weight="1"
-            android:onClick="clickBtn" />
+            android:onClick="onClick" />
         <ImageButton
             android:id="@+id/btnMovies"
             android:layout_width="140dp"
@@ -29,7 +29,7 @@
             android:src="@drawable/movies"
             android:contentDescription="@string/contentDescMovies"
             android:layout_weight="1"
-            android:onClick="clickBtn"/>
+            android:onClick="onClick"/>
     </TableRow>
     <TableRow>
         <ImageButton
@@ -41,7 +41,7 @@
             android:src="@drawable/restaurants"
             android:contentDescription="@string/contentDescRestaurants"
             android:layout_weight="1"
-            android:onClick="clickBtn"/>
+            android:onClick="onClick"/>
         <ImageButton
             android:id="@+id/btnTransport"
             android:layout_width="140dp"
@@ -51,7 +51,7 @@
             android:src="@drawable/transport"
             android:contentDescription="@string/contentDescTransport"
             android:layout_weight="1"
-            android:onClick="clickBtn"/>
+            android:onClick="onClick"/>
     </TableRow>
     <TableRow>
         <ImageButton
@@ -63,7 +63,7 @@
             android:src="@drawable/bussiness"
             android:contentDescription="@string/contentDescBussiness"
             android:layout_weight="1"
-            android:onClick="clickBtn"/>
+            android:onClick="onClick"/>
         <ImageButton
             android:id="@+id/btnEvents"
             android:layout_width="140dp"
@@ -73,7 +73,7 @@
             android:src="@drawable/events"
             android:contentDescription="@string/contentDescEvents"
             android:layout_weight="1"
-            android:onClick="clickBtn"/>
+            android:onClick="onClick"/>
     </TableRow>
 
 
