@@ -21,5 +21,29 @@
         <item> Burguer </item>
         <item> Fosters </item>
     </string-array>
+    <string-array name="bussinessType">
+        <item>Belleza</item>
+        <item>Calzado</item>
+        <item>Libros, Música y multimedia</item>
+        <item>Hogar</item>
+        <item>Juguetes</item>
+        <item>Moda</item>
+        <item>Mascotas</item>
+        <item>Supermercado y alimentación</item>
+    </string-array>
+    <string-array name="bussinessList">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
     //Todo: hacer lo mismo que arriba pero con los hoteles
 </resources>
