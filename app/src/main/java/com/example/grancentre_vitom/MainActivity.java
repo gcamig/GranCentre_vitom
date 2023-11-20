@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b2 = findViewById(R.id.btnMovies);
         b3 = findViewById(R.id.btnRestaurants);
         b4 = findViewById(R.id.btnTransport);
-        b5 = findViewById(R.id.btnBussiness);
+        b5 = findViewById(R.id.btnBusiness);
         b6 = findViewById(R.id.btnEvents);
     }
 
