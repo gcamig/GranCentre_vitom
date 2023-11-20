@@ -4,6 +4,8 @@
     <string name="contentDescMovies">Movie image</string>
     <string name="contentDescRestaurants">Restaurant image</string>
     <string name="contentDescTransport">Transport image</string>
-    <string name="contentDescBussiness">Bussiness image</string>
+    <string name="contentDescBusiness">Business image</string>
     <string name="contentDescEvents">Events image</string>
+    <string name="contentDescConfig">Config image</string>
+
 </resources>

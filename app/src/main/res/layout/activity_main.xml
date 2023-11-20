@@ -9,6 +9,14 @@
     android:layout_gravity="center"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/conf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@drawable/configuration"
+        android:contentDescription="@string/contentDescConfig"
+        />
     <TableRow>
         <ImageButton
             android:id="@+id/btnHotels"
@@ -55,13 +63,13 @@
     </TableRow>
     <TableRow>
         <ImageButton
-            android:id="@+id/btnBussiness"
+            android:id="@+id/btnBusiness"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_margin="10dp"
             android:background="#333"
-            android:src="@drawable/bussiness"
-            android:contentDescription="@string/contentDescBussiness"
+            android:src="@drawable/business"
+            android:contentDescription="@string/contentDescBusiness"
             android:layout_weight="1"
             android:onClick="onClick"/>
         <ImageButton
