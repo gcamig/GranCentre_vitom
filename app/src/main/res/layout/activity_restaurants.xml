@@ -35,7 +35,6 @@
         ></Spinner>
 
     </LinearLayout>
-
     <ListView
         android:id="@+id/ListView"
         android:layout_width="match_parent"
