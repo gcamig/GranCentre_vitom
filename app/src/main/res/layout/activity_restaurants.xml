@@ -7,19 +7,28 @@
     tools:context=".Restaurants"
     android:orientation="vertical"
     >
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:text="Restaurants"
         android:layout_margin="10dp"
-    ></TextView>
-    <Spinner
-        android:id="@+id/spinner"
+        ></TextView>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-    ></Spinner>
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ></Spinner>
+
+    </LinearLayout>
+
+
+
+
 
 </LinearLayout>
