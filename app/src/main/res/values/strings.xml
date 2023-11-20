@@ -9,10 +9,17 @@
     <string name="contentDescConfig">Config image</string>
 
     //creamos el array de string que sera el del menu desplegable
-    <string-array name="restaurantList">
+    <string-array name="restaurantType">
         <item> Italia </item>
         <item> Japones </item>
         <item> Vegetaria </item>
+    </string-array>
+    <string-array name="restaurantList">
+        <item> La Tremenda </item>
+        <item> Viena </item>
+        <item> McDonalds </item>
+        <item> Burguer </item>
+        <item> Fosters </item>
     </string-array>
     //Todo: hacer lo mismo que arriba pero con los hoteles
 </resources>
