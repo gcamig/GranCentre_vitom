@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
+        android:textSize="40sp"
         android:text="Restaurants"
         android:layout_margin="10dp"
         ></TextView>
@@ -19,14 +19,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:text="Filtrar restaurants"
+            android:textSize="20sp"
+            android:layout_margin="10dp"></TextView>
+
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            ></Spinner>
+            android:layout_margin="10dp"
+        ></Spinner>
 
     </LinearLayout>
-
+    <ListView
+        android:id="@+id/ListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+    ></ListView>
 
 
 
