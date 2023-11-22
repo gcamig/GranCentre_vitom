@@ -4,66 +4,116 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Restaurants extends AppCompatActivity {
 ListView listView;
+Spinner spinner;
+ArrayAdapter<restaurant> adapter;
+String[] categories = {"Tots","Italia", "Japones", "Mexica"};
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
-        Spinner spinner = findViewById(R.id.FiltreRestaurants);
-        ArrayAdapter<CharSequence> adapterSpinner = ArrayAdapter.createFromResource(
+        inicialitzarViews();
+    }
+    private void inicialitzarViews(){
+        spinner = findViewById(R.id.FiltreRestaurants);
+        spinner.setAdapter(new ArrayAdapter<>(
                 this,
-                //solo cambia el array segun lo que quieras poner, esta definido en el string.xml
-                R.array.restaurantType,
-                android.R.layout.simple_spinner_item
-        );
-        adapterSpinner.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapterSpinner);
+                android.R.layout.simple_spinner_item,
+                categories
+        ));
 
         listView = findViewById(R.id.ListView);
-        ArrayAdapter<CharSequence> adapterList = ArrayAdapter.createFromResource(
-                this,
-                R.array.restaurantList,
-                android.R.layout.simple_list_item_1
-        );
-        listView.setAdapter(adapterList);
-
-    }
-    //filtra por nombre pero falta aprender a filtrar por tipo
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        // Obtener la opción seleccionada en el Spinner
-        String categoriaSeleccionada = parent.getItemAtPosition(position).toString();
-        //obtenemos el array de restaurantes
-        String [] restaurants = getResources().getStringArray(R.array.restaurantList);
-        // Filtrar los datos en el adaptador del ListView según la categoría seleccionada
-        ArrayList<String> datosFiltrados = new ArrayList<>();
-        for (String restaurante : restaurants) {
-            if (restaurante.contains(categoriaSeleccionada)) {
-                datosFiltrados.add(restaurante);
-            }
-        }
-
-        // Actualizar el adaptador del ListView con los datos filtrados
-        ArrayAdapter<String> adapterFiltrado = new ArrayAdapter<>(
+        listView.setAdapter(new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
-                datosFiltrados
-        );
-        listView.setAdapter(adapterFiltrado);
+                getRestaurant()
+        ));
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position >= 0 && position < categories.length) {
+                    getSelectedCategoria(position);
+                } else {
+                    Toast.makeText(Restaurants.this, "La categoria seleccionada no existeix!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
-    //@Override
-    public void onNothingSelected(AdapterView<?> parent){
-        //no hagas nada si no hay nada seleccionado
+    private ArrayList<restaurant> getRestaurant() {
+        ArrayList<restaurant> data = new ArrayList<>();
+        data.clear();
+
+        //String[] categories = {"Tots","Italia", "Japones", "Mexica"};
+        //0:tots, 1:Italia, 2:Japones, 3:Mexica
+
+
+        data.add(new restaurant("La Tremenda", 3));
+        data.add(new restaurant("Viena", 2));
+        data.add(new restaurant("Burguer", 2));
+        data.add(new restaurant("McDonalds", 2));
+        data.add(new restaurant("Pastas Mario", 1));
+
+        return data;
     }
 
+    private void getSelectedCategoria(int pos)
+    {
+        ArrayList<restaurant> restaurants = new ArrayList<>();
+        if(pos == 0) {
+            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getRestaurant());
+        } else {
+            for (restaurant Restaurants : getRestaurant()){
+                if (Restaurants.getType() == pos) {
+                    restaurants.add(Restaurants);
+                }
+            }
+
+            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, restaurants);
+        }
+        listView.setAdapter(adapter);
+    }
+}
+class restaurant{
+    public String nom;
+    public int type;
+
+    public String getNom(){
+        return nom;
+    }
+
+    public int getType(){
+        return type;
+    }
+
+    public restaurant(String nom, int type)
+    {
+        this.nom = nom;
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return nom;
+    }
 }
