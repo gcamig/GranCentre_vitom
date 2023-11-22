@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="20dp">
+        android:layout_marginVertical="20dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -63,6 +63,7 @@
             android:layout_height="400dp"
             android:layout_marginVertical="20dp"
             android:src="@drawable/peli_doraemon"
+            android:scaleType="fitXY"
             android:contentDescription="Pelicula Doraemon: El nuevo dinosaurio"
             android:onClick="onClickPelis"
             />
@@ -74,6 +75,7 @@
             android:layout_marginVertical="20dp"
             android:src="@drawable/peli_paw_patrol"
             android:contentDescription="Pelicula Paw Patrol"
+            android:scaleType="fitXY"
             android:onClick="onClickPelis"
             />
         <ImageButton
@@ -84,6 +86,7 @@
             android:layout_marginVertical="20dp"
             android:src="@drawable/peli_sawx"
             android:contentDescription="Pelicula Saw X"
+            android:scaleType="fitXY"
             android:onClick="onClickPelis"
             />
     </LinearLayout>
