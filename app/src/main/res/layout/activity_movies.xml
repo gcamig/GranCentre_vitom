@@ -32,7 +32,7 @@
             android:contentDescription="Pelicula Hypnotic"
             android:scaleType="fitXY"
             android:src="@drawable/peli_hypnotic"
-            android:onClick="onClickPelis"
+            android:onClick="onClick"
             />
         <ImageButton
             android:id="@+id/peli_hungerGames"
@@ -43,7 +43,7 @@
             android:src="@drawable/peli_hunger_games"
             android:contentDescription="Pelicula Los Juegos del Hambre"
             android:scaleType="fitXY"
-            android:onClick="onClickPelis"
+            android:onClick="onClick"
             />
         <ImageButton
             android:id="@+id/peli_lotr"
@@ -54,8 +54,9 @@
             android:src="@drawable/peli_lotr"
             android:contentDescription="Pelicula Lord Of The Rings: Two Towers"
             android:scaleType="fitXY"
-            android:onClick="onClickPelis"
+            android:onClick="onClick"
             />
+
         <ImageButton
             android:id="@+id/peli_doraemon"
             android:layout_width="wrap_content"
@@ -65,7 +66,7 @@
             android:src="@drawable/peli_doraemon"
             android:scaleType="fitXY"
             android:contentDescription="Pelicula Doraemon: El nuevo dinosaurio"
-            android:onClick="onClickPelis"
+            android:onClick="onClick"
             />
         <ImageButton
             android:id="@+id/peli_pawPatrol"
@@ -76,7 +77,7 @@
             android:src="@drawable/peli_paw_patrol"
             android:contentDescription="Pelicula Paw Patrol"
             android:scaleType="fitXY"
-            android:onClick="onClickPelis"
+            android:onClick="onClick"
             />
         <ImageButton
             android:id="@+id/peli_sawX"
@@ -87,7 +88,7 @@
             android:src="@drawable/peli_sawx"
             android:contentDescription="Pelicula Saw X"
             android:scaleType="fitXY"
-            android:onClick="onClickPelis"
+            android:onClick="onClick"
             />
     </LinearLayout>
 </ScrollView>
