@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //tio.show();
         }
         else if (view.getId() == b5.getId()){
-            Intent intent = new Intent(this, Business.class);
+            Intent intent = new Intent(this, Businesses.class);
             startActivity(intent);
             //Toast tio = Toast.makeText(this, "Pagina de Bussiness", Toast.LENGTH_SHORT);
             //tio.show();

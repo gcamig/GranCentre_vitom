@@ -29,7 +29,7 @@ String[] categories = {"Tots","Italia", "Japones", "Mexica"};
         inicialitzarViews();
     }
     private void inicialitzarViews(){
-        spinner = findViewById(R.id.FiltreRestaurants);
+        spinner = findViewById(R.id.filtreRestaurants);
         spinner.setAdapter(new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
