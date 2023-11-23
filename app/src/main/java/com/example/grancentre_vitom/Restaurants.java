@@ -65,6 +65,8 @@ String[] categories = {"Tots","Italia", "Japones", "Mexica"};
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(Restaurants.this, SingleRestaurant.class);
                 startActivity(intent);
+                Bundle bundel = new Bundle();
+                bundel.putString();
             }
         });
     }
