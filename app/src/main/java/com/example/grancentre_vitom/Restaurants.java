@@ -36,7 +36,7 @@ String[] categories = {"Tots","Italia", "Japones", "Mexica"};
                 categories
         ));
 
-        listView = findViewById(R.id.ListView);
+        listView = findViewById(R.id.restaurantsList);
         listView.setAdapter(new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
@@ -66,7 +66,6 @@ String[] categories = {"Tots","Italia", "Japones", "Mexica"};
 
         //String[] categories = {"Tots","Italia", "Japones", "Mexica"};
         //0:tots, 1:Italia, 2:Japones, 3:Mexica
-
 
         data.add(new restaurant("La Tremenda", 3));
         data.add(new restaurant("Viena", 2));

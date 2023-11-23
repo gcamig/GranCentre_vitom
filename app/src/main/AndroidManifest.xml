@@ -16,7 +16,7 @@
             android:name=".Events"
             android:exported="false" />
         <activity
-            android:name=".Bussiness"
+            android:name=".Business"
             android:exported="false" />
         <activity
             android:name=".Transport"

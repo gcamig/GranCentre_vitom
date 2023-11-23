@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //tio.show();
         }
         else if (view.getId() == b5.getId()){
-            Intent intent = new Intent(this, Bussiness.class);
+            Intent intent = new Intent(this, Business.class);
             startActivity(intent);
             //Toast tio = Toast.makeText(this, "Pagina de Bussiness", Toast.LENGTH_SHORT);
             //tio.show();
