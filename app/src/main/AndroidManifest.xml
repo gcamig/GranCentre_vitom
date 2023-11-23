@@ -19,7 +19,7 @@
             android:name=".Events"
             android:exported="false" />
         <activity
-            android:name=".Business"
+            android:name=".Businesses"
             android:exported="false" />
         <activity
             android:name=".Transport"
