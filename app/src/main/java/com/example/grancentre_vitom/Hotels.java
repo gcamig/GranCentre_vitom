@@ -17,7 +17,7 @@ public class Hotels extends AppCompatActivity {
 
     ListView listView;
     Spinner spinner;
-    ArrayAdapter<restaurant> adapter;
+    ArrayAdapter<hotel> adapter;
     String[] estrellas = {"Tots","5*", "4*", "3*", "2*", "1*"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
