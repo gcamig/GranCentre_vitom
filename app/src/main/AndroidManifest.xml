@@ -13,6 +13,9 @@
         android:theme="@style/Theme.GranCentre_vitom"
         tools:targetApi="31">
         <activity
+            android:name=".CustomList"
+            android:exported="false" />
+        <activity
             android:name=".SingleRestaurant"
             android:exported="false" />
         <activity

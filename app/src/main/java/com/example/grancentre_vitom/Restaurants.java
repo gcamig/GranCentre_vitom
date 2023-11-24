@@ -20,7 +20,7 @@ ListView listView;
 Spinner spinner;
 ArrayAdapter<restaurant> adapter;
 String[] categories = {"Tots","Italia", "Japones", "Mexica"};
-
+int [] imgList = {R.drawable.restaurants};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
