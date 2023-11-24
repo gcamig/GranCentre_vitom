@@ -65,11 +65,15 @@ String[] categories = {"Tots","Italia", "Japones", "Mexica"};
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(Restaurants.this, SingleRestaurant.class);
                 startActivity(intent);
+
                 Bundle bundel = new Bundle();
-                //bundel.putString();
+                ArrayList<restaurant> restaurantsList = getRestaurant();
+                String nom = restaurantsList.get(position).getNom();
+                bundel.putString("Nom", restaurantsList.get(position).getNom());
             }
         });
     }
+
 
     private ArrayList<restaurant> getRestaurant() {
         ArrayList<restaurant> data = new ArrayList<>();
