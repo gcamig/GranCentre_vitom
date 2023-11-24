@@ -39,11 +39,12 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView = inflater.inflate(R.layout.activity_custom_list, null);
         TextView name = (TextView) convertView.findViewById(R.id.name);
-        TextView desc = (TextView) convertView.findViewById(R.id.desc);
         ImageView Img = (ImageView) convertView.findViewById(R.id.imgView);
+        //TextView desc = (TextView) convertView.findViewById(R.id.desc);
+        //desc.setText(listRestaurant[position]);
         name.setText(listRestaurant[position]);
-        desc.setText(listRestaurant[position]);
-        Img.setImageResource(listImages[position]);
+        //Img.setImageResource(listImages[position]);
+        Img.setImageResource(listImages[0]);
         return convertView;
     }
 }

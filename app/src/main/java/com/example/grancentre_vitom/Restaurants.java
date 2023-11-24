@@ -20,13 +20,17 @@ ListView listView;
 Spinner spinner;
 ArrayAdapter<restaurant> adapter;
 String[] categories = {"Tots","Italia", "Japones", "Mexica"};
+String [] restaurantList = new String[30];
 int [] imgList = {R.drawable.restaurants};
+
+CustomAdapter customAdapter1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
+        getRestaurantString();
         inicialitzarViews();
     }
     private void inicialitzarViews(){
@@ -38,11 +42,9 @@ int [] imgList = {R.drawable.restaurants};
         ));
 
         listView = findViewById(R.id.restaurantsList);
-        listView.setAdapter(new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                getRestaurant()
-        ));
+        //listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getRestaurant()));
+        CustomAdapter customAdapter = new CustomAdapter(this, restaurantList, imgList);
+        listView.setAdapter(customAdapter);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -91,21 +93,34 @@ int [] imgList = {R.drawable.restaurants};
         return data;
     }
 
+    private void getRestaurantString(){
+        int i=0;
+        for (restaurant Restaurants : getRestaurant()){
+            restaurantList[i] = Restaurants.getNom();
+            i++;
+        }
+    }
+
     private void getSelectedCategoria(int pos)
     {
-        ArrayList<restaurant> restaurants = new ArrayList<>();
+        String [] restList = new String[30];
+        //ArrayList<restaurant> restaurants = new ArrayList<>();
         if(pos == 0) {
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getRestaurant());
+            //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getRestaurant());
+            customAdapter1= new CustomAdapter(this,restaurantList,imgList);
         } else {
+            int i=0;
             for (restaurant Restaurants : getRestaurant()){
                 if (Restaurants.getType() == pos) {
-                    restaurants.add(Restaurants);
+                    //restaurants.add(Restaurants);
+                    restList[i]= Restaurants.getNom();
                 }
+                i++;
             }
-
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, restaurants);
+            customAdapter1= new CustomAdapter(this,restList,imgList);
+            //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, restaurants);
         }
-        listView.setAdapter(adapter);
+        listView.setAdapter(customAdapter1);
     }
 }
 class restaurant{
