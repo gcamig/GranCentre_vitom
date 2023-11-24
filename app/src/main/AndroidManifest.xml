@@ -16,6 +16,9 @@
             android:name=".CustomList"
             android:exported="false" />
         <activity
+            android:name=".SingleHotel"
+            android:exported="false" />
+        <activity
             android:name=".SingleRestaurant"
             android:exported="false" />
         <activity

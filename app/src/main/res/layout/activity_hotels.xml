@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Restaurants"
+    tools:context=".Hotels"
     android:orientation="vertical"
     >
     <TextView
@@ -14,38 +14,35 @@
         android:text="Hotels"
         android:gravity="center"
         android:layout_margin="10dp"
-        />
+    />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+    >
 
 
         <TextView
             android:layout_width="241dp"
             android:layout_height="wrap_content"
-            android:text="Filtrar restaurants"
+            android:text="Filtrar hotels"
             android:textSize="20sp"
-            android:layout_margin="10dp"/>
-
+            android:layout_margin="10dp"
+        />
         <Spinner
-            android:id="@+id/FiltreRestaurants"
+            android:id="@+id/filtreHotels"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="10dp"
-            />
+        />
 
     </LinearLayout>
     <ListView
-        android:id="@+id/restaurantsList"
+        android:id="@+id/hotelsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        />
-
-
-
-
+    />
 </LinearLayout>
