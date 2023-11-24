@@ -16,7 +16,7 @@
             android:name=".SingleRestaurant"
             android:exported="false" />
         <activity
-            android:name=".peli_info"
+            android:name=".Movies$peli_info"
             android:exported="false" />
         <activity
             android:name=".Events"

@@ -66,7 +66,7 @@ String[] categories = {"Tots","Italia", "Japones", "Mexica"};
                 Intent intent = new Intent(Restaurants.this, SingleRestaurant.class);
                 startActivity(intent);
                 Bundle bundel = new Bundle();
-                bundel.putString();
+                //bundel.putString();
             }
         });
     }
