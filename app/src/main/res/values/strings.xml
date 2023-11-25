@@ -15,6 +15,7 @@
         <item> Vegetaria </item>
     </string-array>
     <string-array name="businessTypes">
+        <item>Todos</item>
         <item>Belleza</item>
         <item>Calzado</item>
         <item>Libros, Música y multimedia</item>

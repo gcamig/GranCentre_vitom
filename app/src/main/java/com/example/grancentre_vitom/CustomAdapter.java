@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.Arrays;
 
 public class CustomAdapter extends BaseAdapter {
@@ -16,6 +18,7 @@ public class CustomAdapter extends BaseAdapter {
     String listRestaurant[];
     int listImages [];
     LayoutInflater inflater;
+    String[] imageUrls = {"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/g2gwjgya5erwmcctrahw.jpg"};
     public CustomAdapter(Context ctx, String[] restaurantList, int[] images){
         this.context = ctx;
         this.listRestaurant = restaurantList;
@@ -53,7 +56,10 @@ public class CustomAdapter extends BaseAdapter {
         //desc.setText(listRestaurant[position]);
         name.setText(listRestaurant[position]);
         //Img.setImageResource(listImages[position]);
-        Img.setImageResource(listImages[position]);
+        Glide.with(convertView)
+                .load(imageUrls[position])
+                        .into(Img);
+
         return convertView;
     }
 }
