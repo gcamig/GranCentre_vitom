@@ -19,7 +19,7 @@ public class Businesses extends AppCompatActivity {
     Spinner spinner;
     CustomAdapter adapter;
     String[] categories;
-    int [] imgList = {R.drawable.rest_latremenda};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
