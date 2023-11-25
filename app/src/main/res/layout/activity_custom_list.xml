@@ -20,16 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="La tremenda"
-            android:textSize="30sp"
-            android:id="@+id/name"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Es un bon restaurant"
             android:textSize="20sp"
-            android:id="@+id/desc"
-            />
+            android:id="@+id/name"/>
 
     </LinearLayout>
 

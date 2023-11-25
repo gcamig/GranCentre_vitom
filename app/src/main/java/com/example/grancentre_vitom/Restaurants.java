@@ -19,18 +19,18 @@ public class Restaurants extends AppCompatActivity {
 ListView listView;
 Spinner spinner;
 ArrayAdapter<restaurant> adapter;
-String[] categories = {"Tots","Italia", "Japones", "Mexica"};
-String [] restaurantList = new String[30];
-int [] imgList = {R.drawable.restaurants};
+CustomAdapter customAdapter;
+String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants"};
+//imatges ordenades dels restaurants
+int [] imgList = {R.drawable.rest_latremenda, R.drawable.rest_latradicional};
 
-CustomAdapter customAdapter1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
-        getRestaurantString();
+
         inicialitzarViews();
     }
     private void inicialitzarViews(){
@@ -43,8 +43,7 @@ CustomAdapter customAdapter1;
 
         listView = findViewById(R.id.restaurantsList);
         //listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getRestaurant()));
-        CustomAdapter customAdapter = new CustomAdapter(this, restaurantList, imgList);
-        listView.setAdapter(customAdapter);
+        listView.setAdapter(new CustomAdapter(this, getRestaurantList(),imgList));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -81,24 +80,25 @@ CustomAdapter customAdapter1;
         ArrayList<restaurant> data = new ArrayList<>();
         data.clear();
 
-        //String[] categories = {"Tots","Italia", "Japones", "Mexica"};
-        //0:tots, 1:Italia, 2:Japones, 3:Mexica
+        //String[] categories = {"Tots","Esmorzar", "Menja Rapid", "Mexica", "Restaurants"};
+        //0:tots, 1:Esmorzar, 2:Menja Rapid, 3:Mexica, 4:Restaurants
+        //nom, tipus, web, tlf, ubi
 
-        data.add(new restaurant("La Tremenda", 3));
-        data.add(new restaurant("Viena", 2));
-        data.add(new restaurant("Burguer", 2));
-        data.add(new restaurant("McDonalds", 2));
-        data.add(new restaurant("Pastas Mario", 1));
+        data.add(new restaurant("La tremenda", 4,"https://latremenda.com/" ,"tel:931716897" ,"geo:41.44294,2.20018" ));
+        data.add(new restaurant("La Tradicional", 4, "https://latradicionaltapas.es/", "tel:930400564", "geo:41.44101799298387,2.1984500499960298"));
+        //data.add(new restaurant(""))
 
         return data;
     }
 
-    private void getRestaurantString(){
+    private String [] getRestaurantList(){
+        String [] restaurantList = new String[30];
         int i=0;
         for (restaurant Restaurants : getRestaurant()){
             restaurantList[i] = Restaurants.getNom();
             i++;
         }
+        return restaurantList;
     }
 
     private void getSelectedCategoria(int pos)
@@ -107,7 +107,7 @@ CustomAdapter customAdapter1;
         //ArrayList<restaurant> restaurants = new ArrayList<>();
         if(pos == 0) {
             //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getRestaurant());
-            customAdapter1= new CustomAdapter(this,restaurantList,imgList);
+            customAdapter= new CustomAdapter(this,getRestaurantList(),imgList);
         } else {
             int i=0;
             for (restaurant Restaurants : getRestaurant()){
@@ -117,28 +117,35 @@ CustomAdapter customAdapter1;
                 }
                 i++;
             }
-            customAdapter1= new CustomAdapter(this,restList,imgList);
+            customAdapter= new CustomAdapter(this,restList,imgList);
             //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, restaurants);
         }
-        listView.setAdapter(customAdapter1);
+        listView.setAdapter(customAdapter);
     }
 }
 class restaurant{
     public String nom;
     public int type;
+    public String web;
+    public String tlf;
+    public String ubi;
 
     public String getNom(){
         return nom;
     }
-
     public int getType(){
         return type;
     }
-
-    public restaurant(String nom, int type)
+    public String getWeb() { return web; }
+    public String getTlf() { return tlf; }
+    public  String getUbi() { return ubi; }
+    public restaurant(String nom, int type, String web, String tlf, String ubi)
     {
         this.nom = nom;
         this.type = type;
+        this.web = web;
+        this.tlf = tlf;
+        this.ubi = ubi;
     }
 
     @Override
