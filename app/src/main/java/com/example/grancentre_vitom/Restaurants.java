@@ -18,7 +18,6 @@ import java.util.ArrayList;
 public class Restaurants extends AppCompatActivity {
 ListView listView;
 Spinner spinner;
-ArrayAdapter<restaurant> adapter;
 CustomAdapter customAdapter;
 String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants"};
 //imatges ordenades dels restaurants
@@ -42,7 +41,6 @@ int [] imgList = {R.drawable.rest_latremenda, R.drawable.rest_latradicional};
         ));
 
         listView = findViewById(R.id.restaurantsList);
-        //listView.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getRestaurant()));
         listView.setAdapter(new CustomAdapter(this, getRestaurantList(),imgList));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -84,9 +82,9 @@ int [] imgList = {R.drawable.rest_latremenda, R.drawable.rest_latradicional};
         //0:tots, 1:Esmorzar, 2:Menja Rapid, 3:Mexica, 4:Restaurants
         //nom, tipus, web, tlf, ubi
 
+        //data.add(new restaurant(""))
         data.add(new restaurant("La tremenda", 4,"https://latremenda.com/" ,"tel:931716897" ,"geo:41.44294,2.20018" ));
         data.add(new restaurant("La Tradicional", 4, "https://latradicionaltapas.es/", "tel:930400564", "geo:41.44101799298387,2.1984500499960298"));
-        //data.add(new restaurant(""))
 
         return data;
     }
@@ -104,21 +102,17 @@ int [] imgList = {R.drawable.rest_latremenda, R.drawable.rest_latradicional};
     private void getSelectedCategoria(int pos)
     {
         String [] restList = new String[30];
-        //ArrayList<restaurant> restaurants = new ArrayList<>();
         if(pos == 0) {
-            //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getRestaurant());
             customAdapter= new CustomAdapter(this,getRestaurantList(),imgList);
         } else {
             int i=0;
             for (restaurant Restaurants : getRestaurant()){
                 if (Restaurants.getType() == pos) {
-                    //restaurants.add(Restaurants);
                     restList[i]= Restaurants.getNom();
                 }
                 i++;
             }
             customAdapter= new CustomAdapter(this,restList,imgList);
-            //adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, restaurants);
         }
         listView.setAdapter(customAdapter);
     }
