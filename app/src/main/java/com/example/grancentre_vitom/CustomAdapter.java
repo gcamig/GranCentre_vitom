@@ -16,7 +16,7 @@ public class CustomAdapter extends BaseAdapter {
     String listRestaurant[];
     int listImages [];
     LayoutInflater inflater;
-    public CustomAdapter(Context ctx, String [] restaurantList, int[] images){
+    public CustomAdapter(Context ctx, String[] restaurantList, int[] images){
         this.context = ctx;
         this.listRestaurant = restaurantList;
         this.listImages = images;
