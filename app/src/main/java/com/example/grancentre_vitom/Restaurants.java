@@ -124,10 +124,10 @@ String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants
             int i=0;
             for (restaurant r : getRestaurant()){
                 if (r.getType() == pos) {
-                    restList[i]= r.getNom();
-                    restImg[i] = r.getImgUrl();
+                    restList[i]= r.nom;
+                    restImg[i] = r.imgUrl;
+                    i++;
                 }
-                i++;
             }
             customAdapter= new CustomAdapter(this,restList,restImg);
         }
