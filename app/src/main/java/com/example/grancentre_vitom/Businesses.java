@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -18,7 +19,8 @@ public class Businesses extends AppCompatActivity {
     Spinner spinner;
     CustomAdapter adapter;
     String[] categories;
-    int[] imgList = {};
+    int [] imgList = {R.drawable.rest_latremenda, R.drawable.rest_latradicional};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,6 +96,7 @@ public class Businesses extends AppCompatActivity {
 }
 
 class business{
+    public ImageView img;
     public String nom;
     public int category;
     public String url;
