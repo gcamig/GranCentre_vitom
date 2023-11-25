@@ -16,13 +16,12 @@ import java.util.Arrays;
 public class CustomAdapter extends BaseAdapter {
     Context context;
     String listRestaurant[];
-    int listImages [];
     LayoutInflater inflater;
-    String[] imageUrls = {"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/g2gwjgya5erwmcctrahw.jpg"};
-    public CustomAdapter(Context ctx, String[] restaurantList, int[] images){
+    String[] imageUrls;
+    public CustomAdapter(Context ctx, String[] restaurantList, String[] images){
         this.context = ctx;
         this.listRestaurant = restaurantList;
-        this.listImages = images;
+        this.imageUrls = images;
         inflater = LayoutInflater.from(ctx);
     }
     @Override
@@ -58,7 +57,7 @@ public class CustomAdapter extends BaseAdapter {
         //Img.setImageResource(listImages[position]);
         Glide.with(convertView)
                 .load(imageUrls[position])
-                        .into(Img);
+                .into(Img);
 
         return convertView;
     }
