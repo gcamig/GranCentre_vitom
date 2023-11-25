@@ -119,7 +119,7 @@ String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants
         String [] restList = new String[12];
         String [] restImg = new String[12];
         if(pos == 0) {
-            customAdapter= new CustomAdapter(this,getRestaurantList(),getRestaurantList());
+            customAdapter= new CustomAdapter(this,getRestaurantList(),getRestaurantImg());
         } else {
             int i=0;
             for (restaurant Restaurants : getRestaurant()){
