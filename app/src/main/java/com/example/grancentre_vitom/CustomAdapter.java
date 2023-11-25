@@ -24,14 +24,7 @@ public class CustomAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        int contadorNoNulos = 0;
-
-        for (int i = 0; i < listRestaurant.length; i++) {
-            if (listRestaurant[i] != null) {
-                contadorNoNulos++;
-            }
-        }
-        return contadorNoNulos;
+        return listRestaurant.length;
     }
 
     @Override
