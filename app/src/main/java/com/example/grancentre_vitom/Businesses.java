@@ -2,6 +2,7 @@ package com.example.grancentre_vitom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -57,6 +58,18 @@ public class Businesses extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Businesses.this, SingleBusiness.class);
+                startActivity(intent);
+
+                Bundle info = new Bundle();
+                ArrayList<business> businessesList = getBusiness();
+                info.putString("Nom", businessesList.get(position).getNom());
             }
         });
     }
