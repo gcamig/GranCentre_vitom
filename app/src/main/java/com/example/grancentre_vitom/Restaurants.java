@@ -21,22 +21,6 @@ Spinner spinner;
 CustomAdapter customAdapter;
 String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants"};
 //imatges ordenades dels restaurants
-int [] imgList = {
-        R.drawable.rest_latremenda,
-        R.drawable.rest_latradicional,
-        R.drawable.res_crepnova,
-        R.drawable.res_farggi,
-        R.drawable.res_starbucks,
-        R.drawable.res_manolobakes,
-        R.drawable.res_burger,
-        R.drawable.res_kfc,
-        R.drawable.res_mcdonald,
-        R.drawable.res_empanada,
-        R.drawable.res_oakberry,
-        R.drawable.res_tacobell
-};
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,7 +119,7 @@ int [] imgList = {
         String [] restList = new String[12];
         String [] restImg = new String[12];
         if(pos == 0) {
-            customAdapter= new CustomAdapter(this,getRestaurantList(),getRestaurantList());
+            customAdapter= new CustomAdapter(this,getRestaurantList(),getRestaurantImg());
         } else {
             int i=0;
             for (restaurant Restaurants : getRestaurant()){
