@@ -16,8 +16,9 @@ public class Businesses extends AppCompatActivity {
 
     ListView listView;
     Spinner spinner;
-    ArrayAdapter<business> adapter;
+    CustomAdapter adapter;
     String[] categories;
+    int[] imgList = {};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,14 +68,26 @@ public class Businesses extends AppCompatActivity {
         return data;
     }
 
+    private String[] getBusinessList(){
+        String[] businessList = new String[30];
+        int i = 0;
+        for (business b : getBusiness()){
+            businessList[i] = b.getNom();
+            i++;
+        }
+        return businessList;
+    }
+
     private void getSelectedCategory(int pos){
-        ArrayList<business> businesses = new ArrayList<>();
-        if (pos == 0) adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getBusiness());
+        String[] restList = new String[30];
+        if (pos == 0) adapter = new CustomAdapter(this, getBusinessList(), imgList);
         else {
+            int i = 0;
             for (business b : getBusiness()){
-                if (b.getCategory() == pos) businesses.add(b);
+                if (b.getCategory() == pos) restList[i] = b.getNom();
             }
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, businesses);
+            i++;
+            adapter = new CustomAdapter(this, restList, imgList);
         }
         listView.setAdapter(adapter);
     }
@@ -83,12 +96,19 @@ public class Businesses extends AppCompatActivity {
 class business{
     public String nom;
     public int category;
+    public String url;
+    public String tlf;
+    public String ubi;
     public String getNom() {return nom;}
     public int getCategory() {return category;}
     public business(String nom, int category){
         this.nom = nom;
         this.category = category;
     }
+
+    public String getUrl() {return url;}
+    public String getTlf() {return tlf;}
+    public String getUbi() {return ubi;}
 
     @Override
     public String toString() {return nom;}
