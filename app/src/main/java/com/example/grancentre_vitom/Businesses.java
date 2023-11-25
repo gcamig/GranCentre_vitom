@@ -72,7 +72,7 @@ public class Businesses extends AppCompatActivity {
         data.add(new business("Drim",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/bbhfmxygqk29gisdphnq.png"));
         data.add(new business("Juguettos",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/izccunk7stgfaaqg4smr.png"));
         data.add(new business("Lego Store",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/dodovmdzgcap7g0reb8b.jpg"));
-        data.add(new business("Dyson",4,"https://www.westfield.com/spain/lamaquinista/tiendas-detalle/dyson/75186"));
+        data.add(new business("Dyson",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/tbegab93mrqobqylx1dk.png"));
         data.add(new business("Gato Preto",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/mpioprelb9y1l902qr8n.png"));
         data.add(new business("La Mallorquina",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/pvivrolzvnlmvahaqzsq.jpg"));
         data.add(new business("Natura",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/gwqtfu9aelfdcaxdqtvz.png"));
@@ -84,7 +84,6 @@ public class Businesses extends AppCompatActivity {
         data.add(new business("Crocs",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/hite812d7f9cddxxqrxl.png"));
         data.add(new business("Munich",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/raso2dbpgewn5kojurs9.png"));
         data.add(new business("AW Lab",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/e1hswoenpboizhetz4o6.jpg"));
-        data.add(new business("Druni",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/f1xqpb5jeezc76nrftez.png"));
         data.add(new business("Druni",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/f1xqpb5jeezc76nrftez.png"));
         data.add(new business("Primor",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/onqepfvbf2rbzbgopknh.png"));
         data.add(new business("Sephora",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/t0jlyjlbcri1qawwirw0.png"));
@@ -113,7 +112,7 @@ public class Businesses extends AppCompatActivity {
         return businessList;
     }
 
-
+    // Devuelve los negocios que en el "category" tienen la misma posición que en el spinner dentro del array de categorias.
     private void getSelectedCategory(int pos){
         String[] restList = new String[30];
         String[] restImg = new String[30];
@@ -124,10 +123,9 @@ public class Businesses extends AppCompatActivity {
                 if (b.getCategory() == pos){
                     restList[i] = b.getNom();
                     restImg[i] = b.getImg();
+                    i++;
                 }
-                i++;
             }
-
             adapter = new CustomAdapter(this, restList, restImg);
         }
         listView.setAdapter(adapter);
