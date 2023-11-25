@@ -19,7 +19,7 @@ public class Businesses extends AppCompatActivity {
     Spinner spinner;
     CustomAdapter adapter;
     String[] categories;
-    int [] imgList = {R.drawable.rest_latremenda, R.drawable.rest_latradicional};
+    int [] imgList = {R.drawable.rest_latremenda};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +96,6 @@ public class Businesses extends AppCompatActivity {
 }
 
 class business{
-    public ImageView img;
     public String nom;
     public int category;
     public String url;
