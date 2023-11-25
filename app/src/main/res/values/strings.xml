@@ -21,8 +21,6 @@
         <item>Hogar</item>
         <item>Juguetes</item>
         <item>Moda</item>
-        <item>Mascotas</item>
-        <item>Supermercado y alimentación</item>
     </string-array>
     // Todo: hacer lo mismo que arriba pero con los hoteles
 </resources>
