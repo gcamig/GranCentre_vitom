@@ -27,7 +27,7 @@ int [] imgList = {
         R.drawable.res_crepnova,
         R.drawable.res_farggi,
         R.drawable.res_starbucks,
-        R.drawable.res_manolonakes,
+        R.drawable.res_manolobakes,
         R.drawable.res_burger,
         R.drawable.res_kfc,
         R.drawable.res_mcdonald,
