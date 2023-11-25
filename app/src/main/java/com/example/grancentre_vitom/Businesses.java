@@ -80,16 +80,17 @@ public class Businesses extends AppCompatActivity {
         return businessList;
     }
 
+
     private void getSelectedCategory(int pos){
         String[] restList = new String[30];
-        if (pos == 0) adapter = new CustomAdapter(this, getBusinessList(), imgList);
+        if (pos == 0) adapter = new CustomAdapter(this, getBusinessList(), restList);
         else {
             int i = 0;
             for (business b : getBusiness()){
                 if (b.getCategory() == pos) restList[i] = b.getNom();
             }
             i++;
-            adapter = new CustomAdapter(this, restList, imgList);
+            adapter = new CustomAdapter(this, restList, restList);
         }
         listView.setAdapter(adapter);
     }
