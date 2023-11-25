@@ -49,7 +49,6 @@ String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants
                     Toast.makeText(Restaurants.this, "La categoria seleccionada no existeix!", Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
