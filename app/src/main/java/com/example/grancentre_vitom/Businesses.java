@@ -38,10 +38,10 @@ public class Businesses extends AppCompatActivity {
                 categories
         ));
         listView = findViewById(R.id.businessList);
-        listView.setAdapter(new ArrayAdapter<>(
+        listView.setAdapter(new CustomAdapter(
                 this,
-                (android.R.layout.simple_list_item_1),
-                getBusiness()
+                getBusinessList(),
+                getBusinessImg()
         ));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -103,17 +103,31 @@ public class Businesses extends AppCompatActivity {
         return businessList;
     }
 
+    private String[] getBusinessImg(){
+        String[] businessList = new String[30];
+        int i = 0;
+        for (business b : getBusiness()){
+            businessList[i] = b.getImg();
+            i++;
+        }
+        return businessList;
+    }
+
 
     private void getSelectedCategory(int pos){
         String[] restList = new String[30];
-        if (pos == 0) adapter = new CustomAdapter(this, getBusinessList(), restList);
+        String[] restImg = new String[30];
+        if (pos == 0) adapter = new CustomAdapter(this, getBusinessList(), getBusinessImg());
         else {
             int i = 0;
             for (business b : getBusiness()){
-                if (b.getCategory() == pos) restList[i] = b.getNom();
+                if (b.getCategory() == pos){
+                    restList[i] = b.getNom();
+                    restImg[i] = b.getImg();
+                }
             }
             i++;
-            adapter = new CustomAdapter(this, restList, restList);
+            adapter = new CustomAdapter(this, restList, restImg);
         }
         listView.setAdapter(adapter);
     }
@@ -128,6 +142,7 @@ class business{
     public String ubi;
     public String getNom() {return nom;}
     public int getCategory() {return category;}
+    public String getImg() {return img;}
     public business(String nom, int category, String img){
         this.nom = nom;
         this.category = category;
