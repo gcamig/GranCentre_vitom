@@ -125,8 +125,9 @@ public class Businesses extends AppCompatActivity {
                     restList[i] = b.getNom();
                     restImg[i] = b.getImg();
                 }
+                i++;
             }
-            i++;
+
             adapter = new CustomAdapter(this, restList, restImg);
         }
         listView.setAdapter(adapter);
