@@ -29,6 +29,11 @@ String[] categories;
         categories = getResources().getStringArray(R.array.restaurantTypes);
 
         inicialitzarViews();
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new Fragment_navbar())
+                    .commit();
+        }
     }
     private void inicialitzarViews(){
         spinner = findViewById(R.id.filtreRestaurants);

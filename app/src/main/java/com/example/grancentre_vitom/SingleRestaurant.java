@@ -19,6 +19,12 @@ public class SingleRestaurant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_restaurant);
 
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new Fragment_navbar())
+                    .commit();
+        }
+
         categories = getResources().getStringArray(R.array.restaurantTypes);
 
         Bundle getbundle = getIntent().getExtras();
