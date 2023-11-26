@@ -12,9 +12,11 @@
 
     // Creamos el array de string que sera el del menu desplegable
     <string-array name="restaurantTypes">
-        <item> Italia </item>
-        <item> Japones </item>
-        <item> Vegetaria </item>
+        <item> Tots </item>
+        <item> Esmorzars </item>
+        <item> Menja Rapid </item>
+        <item> Mexica </item>
+        <item> Restaurants </item>
     </string-array>
     <string-array name="businessTypes">
         <item>Todos</item>
