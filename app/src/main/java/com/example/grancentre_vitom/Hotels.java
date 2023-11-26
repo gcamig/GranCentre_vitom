@@ -28,6 +28,12 @@ public class Hotels extends AppCompatActivity {
 
 
         inicialitzarViews();
+
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new Fragment_navbar())
+                    .commit();
+        }
     }
     private void inicialitzarViews(){
         spinner = findViewById(R.id.filtreHotels);
@@ -38,7 +44,7 @@ public class Hotels extends AppCompatActivity {
         ));
 
         listView = findViewById(R.id.hotelsList);
-        listView.setAdapter(new CustomAdapter(this, getHotelList(),getHotelList()));
+        listView.setAdapter(new CustomAdapter(this, getHotelList(),getHotelImg()));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -58,12 +64,19 @@ public class Hotels extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Hotels.this, SingleHotel.class);
-                startActivity(intent);
+                ArrayList<hotel> hotelsList = getHotel();
 
                 Bundle bundel = new Bundle();
-                ArrayList<hotel> hotelsList = getHotel();
-                bundel.putString("Nom", hotelsList.get(position).getNom());
+                bundel.putString("nom", hotelsList.get(position).getNom());
+                bundel.putInt("stars", hotelsList.get(position).getStars());
+                bundel.putString("web", hotelsList.get(position).getWeb());
+                bundel.putString("telf", hotelsList.get(position).getTlf());
+                bundel.putString("ubi", hotelsList.get(position).getUbi());
+                bundel.putString("img", hotelsList.get(position).getImgUrl());
+
+                Intent intent = new Intent(Hotels.this, SingleHotel.class);
+                intent.putExtras(bundel);
+                startActivity(intent);
             }
         });
     }
@@ -122,7 +135,7 @@ public class Hotels extends AppCompatActivity {
         } else {
             int i=0;
             for (hotel r : getHotel()){
-                if (r.getType() == pos) {
+                if (r.getStars() == pos) {
                     restList[i]= r.nom;
                     restImg[i] = r.imgUrl;
                     i++;
@@ -143,7 +156,7 @@ class hotel{
     public String getNom(){
         return nom;
     }
-    public int getType(){
+    public int getStars(){
         return stars;
     }
     public String getWeb() { return web; }
