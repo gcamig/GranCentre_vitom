@@ -28,7 +28,8 @@
             android:exported="false" />
         <activity
             android:name=".SingleHotel"
-            android:exported="false" />
+            android:exported="false"
+            />
         <activity
             android:name=".SingleRestaurant"
             android:exported="false" />

@@ -3,6 +3,7 @@ package com.example.grancentre_vitom;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -50,7 +51,7 @@ public class SingleHotel extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.callHotel){
-            Intent intent = new Intent(this, data[3].getClass());
+            Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + data[3]));
             startActivity(intent);
         }
     }
