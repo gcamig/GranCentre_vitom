@@ -31,10 +31,17 @@ public class SingleBusiness extends AppCompatActivity {
 
         TextView businessName = findViewById(R.id.businessName);
         TextView businessCategory = findViewById(R.id.businessCategory);
+        TextView businessTlf = findViewById(R.id.businessTlf);
         ImageView businessImg = findViewById(R.id.businessImg);
+        TextView businessUrl = findViewById(R.id.businessUrl);
+        TextView businessUbi = findViewById(R.id.businessUbi);
 
         businessName.setText(data[0]);
         businessCategory.setText(data[1]);
+        businessTlf.setText(data[3]);
+        businessUrl.setText(data[2]);
+        businessUbi.setText(data[4]);
+
 
         Glide.with(this)
                 .load(data[5])

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarSize="12dp"
+    tools:context=".Movies">
+
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOTES LES PEL·LÍCULES"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginVertical="2dp"
+            android:textSize="18sp"
+            />
+
+        <ImageButton
+            android:id="@+id/peli_hypnotic"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="75dp"
+            android:layout_height="400dp"
+            android:layout_marginVertical="20dp"
+            android:contentDescription="Pelicula Hypnotic"
+            android:scaleType="fitXY"
+            android:src="@drawable/peli_hypnotic"
+            android:onClick="onClick"
+            />
+        <ImageButton
+            android:id="@+id/peli_hungerGames"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="75dp"
+            android:layout_height="400dp"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/peli_hunger_games"
+            android:contentDescription="Pelicula Los Juegos del Hambre"
+            android:scaleType="fitXY"
+            android:onClick="onClick"
+            />
+        <ImageButton
+            android:id="@+id/peli_lotr"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="75dp"
+            android:layout_height="400dp"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/peli_lotr"
+            android:contentDescription="Pelicula Lord Of The Rings: Two Towers"
+            android:scaleType="fitXY"
+            android:onClick="onClick"
+            />
+
+        <ImageButton
+            android:id="@+id/peli_doraemon"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="75dp"
+            android:layout_height="400dp"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/peli_doraemon"
+            android:scaleType="fitXY"
+            android:contentDescription="Pelicula Doraemon: El nuevo dinosaurio"
+            android:onClick="onClick"
+            />
+        <ImageButton
+            android:id="@+id/peli_pawPatrol"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="75dp"
+            android:layout_height="400dp"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/peli_paw_patrol"
+            android:contentDescription="Pelicula Paw Patrol"
+            android:scaleType="fitXY"
+            android:onClick="onClick"
+            />
+        <ImageButton
+            android:id="@+id/peli_sawX"
+            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="75dp"
+            android:layout_height="400dp"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/peli_sawx"
+            android:contentDescription="Pelicula Saw X"
+            android:scaleType="fitXY"
+            android:onClick="onClick"
+            />
+
+    </LinearLayout> -->
+</ScrollView>
