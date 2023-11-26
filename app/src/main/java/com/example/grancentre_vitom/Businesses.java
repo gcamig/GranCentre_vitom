@@ -20,7 +20,7 @@ public class Businesses extends AppCompatActivity {
     Spinner spinner;
     CustomAdapter adapter;
     String[] categories;
-
+    ArrayList<business> businessesList = getBusiness();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,12 +69,17 @@ public class Businesses extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Businesses.this, SingleBusiness.class);
-                startActivity(intent);
+                Bundle bundel = new Bundle();
+                bundel.putString("name", businessesList.get(position).getNom());
+                bundel.putInt("category", businessesList.get(position).getCategory());
+                bundel.putString("url", businessesList.get(position).getUrl());
+                bundel.putString("tlf", businessesList.get(position).getTlf());
+                bundel.putString("ubi", businessesList.get(position).getUbi());
+                bundel.putString("img", businessesList.get(position).getImg());
 
-                Bundle info = new Bundle();
-                ArrayList<business> businessesList = getBusiness();
-                info.putString("Nom", businessesList.get(position).getNom());
+                Intent intent = new Intent(Businesses.this, SingleBusiness.class);
+                intent.putExtras(bundel);
+                startActivity(intent);
             }
         });
     }
@@ -134,13 +139,18 @@ public class Businesses extends AppCompatActivity {
     private void getSelectedCategory(int pos){
         String[] restList = new String[30];
         String[] restImg = new String[30];
-        if (pos == 0) adapter = new CustomAdapter(this, getBusinessList(), getBusinessImg());
+        if (pos == 0){
+            adapter = new CustomAdapter(this, getBusinessList(), getBusinessImg());
+            businessesList = getBusiness();
+        }
         else {
+            businessesList.clear();
             int i = 0;
             for (business b : getBusiness()){
                 if (b.getCategory() == pos){
                     restList[i] = b.getNom();
                     restImg[i] = b.getImg();
+                    businessesList.add(b);
                     i++;
                 }
             }

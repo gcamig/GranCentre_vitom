@@ -31,6 +31,7 @@ public class Fragment_navbar extends Fragment {
         bBack.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                // Deprecated pero sigue funcionando
                 getActivity().onBackPressed();
             }
         });

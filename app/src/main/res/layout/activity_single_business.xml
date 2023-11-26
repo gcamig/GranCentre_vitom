@@ -14,9 +14,21 @@
 
     </FrameLayout>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:text="siu"/>
+        android:textSize="20sp"
+        android:id="@+id/businessName"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:id="@+id/businessCategory"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/businessImg"
+        />
 
 </LinearLayout>
