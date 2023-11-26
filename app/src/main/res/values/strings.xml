@@ -8,6 +8,7 @@
     <string name="contentDescEvents">Events image</string>
     <string name="contentDescConfig">Config image</string>
     <string name="contentDescBack">Back image</string>
+    <string name="contentDescHome">Home image</string>
 
     // Creamos el array de string que sera el del menu desplegable
     <string-array name="restaurantTypes">

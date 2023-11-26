@@ -16,6 +16,15 @@
         android:contentDescription="@string/contentDescBack"
         android:onClick="onClick"/>
     <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/home"
+        android:background="#00FFFFFF"
+        android:layout_weight="1"
+        android:contentDescription="@string/contentDescHome"
+        android:onClick="onClick"/>
+    <ImageButton
         android:id="@+id/btnConfig"
         android:layout_width="80dp"
         android:layout_height="match_parent"

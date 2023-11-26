@@ -19,7 +19,9 @@ public class Fragment_navbar extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_fragment_navbar, container, false);
         ImageButton bBack = view.findViewById(R.id.btnBack);
-        bBack.setOnClickListener(new View.OnClickListener(){
+        ImageButton bHome = view.findViewById(R.id.btnHome);
+        ImageButton bConfig = view.findViewById(R.id.btnConfig);
+        bHome.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(getActivity(), MainActivity.class);
