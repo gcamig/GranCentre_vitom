@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SingleBusiness">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/businessImg"
+            android:padding="5dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="3dp">
+
+            <TextView
+                android:id="@+id/businessName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BURGUER"
+                android:textSize="30sp"></TextView>
+
+            <TextView
+                android:id="@+id/businessCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tipo fast food"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/businessTlf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefono de contacto"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/businessUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="enlace web"
+        android:textSize="20sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+        />
+    <TextView
+        android:id="@+id/businessUbi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="enlace ubicacion"
+        android:textSize="20sp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="5dp"
+        />
+
+</LinearLayout>
