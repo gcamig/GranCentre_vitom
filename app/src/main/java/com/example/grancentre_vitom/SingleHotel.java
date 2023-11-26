@@ -10,25 +10,21 @@ import com.bumptech.glide.Glide;
 
 public class SingleHotel extends AppCompatActivity {
     String[] data = new String[6];
-    int stars;
+
+    String[] starsS;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_hotel);
-
+        starsS = getResources().getStringArray(R.array.starsIc);
         Bundle getbundle = getIntent().getExtras();
         data[0] = getbundle.getString("nom");
-        stars = getbundle.getInt("stars");
+        data[1] = starsS[getbundle.getInt("stars")];
         data[2] = getbundle.getString("web");
         data[3] = getbundle.getString("telf");
         data[4] = getbundle.getString("ubi");
         data[5] = getbundle.getString("img");
-
-        if(stars == 1) data[1] = "Hotel de 1 ⭐";
-        if (stars == 2) data[1] = "Hotel de 2 ⭐";
-        if (stars == 3) data[1] = "Hotel de 3 ⭐";
-        if (stars == 4) data[1] = "Hotel de 4 ⭐";
-        if (stars == 5) data[1] = "Hotel de 5 ⭐";
 
         ImageView Img = findViewById(R.id.resHotelImg);
         TextView nomH = findViewById(R.id.nomH);

@@ -25,5 +25,13 @@
         <item>Juguetes</item>
         <item>Moda</item>
     </string-array>
+
+    <string-array name="starsIc">
+        <item>Hotel de 1 ⭐</item>
+        <item>Hotel de 2 ⭐</item>
+        <item>Hotel de 3 ⭐</item>
+        <item>Hotel de 4 ⭐</item>
+        <item>Hotel de 5 ⭐</item>
+    </string-array>
     // Todo: hacer lo mismo que arriba pero con los hoteles
 </resources>
