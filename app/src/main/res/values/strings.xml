@@ -29,6 +29,7 @@
     </string-array>
 
     <string-array name="starsIc">
+        <item>Tots</item>
         <item>Hotel de 1 ⭐</item>
         <item>Hotel de 2 ⭐</item>
         <item>Hotel de 3 ⭐</item>

@@ -19,7 +19,7 @@ public class Hotels extends AppCompatActivity {
     ListView listView;
     Spinner spinner;
     CustomAdapter customAdapter;
-    String[] estrellas = {"Tots","5⭐", "4⭐", "3⭐", "2⭐", "1⭐"};
+    String[] estrellas;
     //imatges ordenades dels hotels
     ArrayList<hotel> hotelsList = getHotel();
 
@@ -38,6 +38,7 @@ public class Hotels extends AppCompatActivity {
         }
     }
     private void inicialitzarViews(){
+        estrellas = getResources().getStringArray(R.array.starsIc);
         spinner = findViewById(R.id.filtreHotels);
         spinner.setAdapter(new ArrayAdapter<>(
                 this,
@@ -89,8 +90,10 @@ public class Hotels extends AppCompatActivity {
         data.clear();
 
         //String[] estrellas = {"Tots","5⭐", "4⭐", "3⭐", "2⭐", "1⭐"};
-        //0:tots, 1:Esmorzar, 2:Menja Rapid, 3:Mexica, 4:Restaurants
+
         //nom, tipus, web, tlf, ubi
+
+
 
         //data.add(new restaurant(""))
         data.add(new hotel("Barcelona Corona Hostal", 5, "https://www.coronahostel.com/", "tel:935393239", "geo:41.434735793010205, 2.218611552434027","https://los40.com/resizer/PQPPAQVYQT03CkJhLQrBsD-YW44=/654x491/filters:format(jpg):quality(70)/cloudfront-eu-central-1.images.arcpublishing.com/prisaradiolos40/NZIOJAQ7EFKE5LZ4PGLIGZBGXM.jpg"));
@@ -110,7 +113,7 @@ public class Hotels extends AppCompatActivity {
     }
 
     private String [] getHotelList(){
-        String [] hotelList = new String[12];
+        String [] hotelList = new String[16];
         int i=0;
         for (hotel Hotels : getHotel()){
             hotelList[i] = Hotels.getNom();
@@ -119,7 +122,7 @@ public class Hotels extends AppCompatActivity {
         return hotelList;
     }
     private String [] getHotelImg(){
-        String [] hotelImg = new String[12];
+        String [] hotelImg = new String[16];
         int i=0;
         for (hotel Hotels : getHotel()){
             hotelImg [i] = Hotels.getImgUrl();
@@ -130,8 +133,8 @@ public class Hotels extends AppCompatActivity {
 
     private void getSelectedCategoria(int pos)
     {
-        String [] restList = new String[12];
-        String [] restImg = new String[12];
+        String [] restList = new String[16];
+        String [] restImg = new String[16];
         if(pos == 0) {
             customAdapter= new CustomAdapter(this,getHotelList(),getHotelImg());
             hotelsList = getHotel();
