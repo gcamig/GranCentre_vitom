@@ -32,8 +32,8 @@ public class SingleRestaurant extends AppCompatActivity {
         if (type == 3) data[1] = "Mexica";
         if (type == 4) data[1] = "Restaurants";
 
-        ImageView Img = findViewById(R.id.Tvimg);
-        TextView nom = findViewById(R.id.nom);
+        ImageView Img = findViewById(R.id.rest_img);
+        TextView nom = findViewById(R.id.rest_nom);
         TextView type = findViewById(R.id.type);
 
         nom.setText(data[0]);
