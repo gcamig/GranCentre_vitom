@@ -2,13 +2,15 @@ package com.example.grancentre_vitom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class SingleHotel extends AppCompatActivity {
+public class SingleHotel extends AppCompatActivity implements View.OnClickListener{
     String[] data = new String[6];
 
     String[] starsS;
@@ -41,6 +43,15 @@ public class SingleHotel extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new Fragment_navbar())
                     .commit();
+        }
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.callHotel){
+            Intent intent = new Intent(this, data[3].getClass());
+            startActivity(intent);
         }
     }
 }
