@@ -38,7 +38,7 @@ String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants
         ));
 
         listView = findViewById(R.id.restaurantsList);
-        listView.setAdapter(new CustomAdapter(this, getRestaurantList(),getRestaurantList()));
+        listView.setAdapter(new CustomAdapter(this, getRestaurantList(),getRestaurantImg()));
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -58,12 +58,19 @@ String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(Restaurants.this, SingleRestaurant.class);
-                startActivity(intent);
+                ArrayList<restaurant> restaurantsList = getRestaurant();
 
                 Bundle bundel = new Bundle();
-                ArrayList<restaurant> restaurantsList = getRestaurant();
-                bundel.putString("Nom", restaurantsList.get(position).getNom());
+                bundel.putString("nom", restaurantsList.get(position).getNom());
+                bundel.putInt("type", restaurantsList.get(position).getType());
+                bundel.putString("web", restaurantsList.get(position).getWeb());
+                bundel.putString("telf", restaurantsList.get(position).getTlf());
+                bundel.putString("ubi", restaurantsList.get(position).getUbi());
+                bundel.putString("img", restaurantsList.get(position).getImgUrl());
+
+                Intent intent = new Intent(Restaurants.this, SingleRestaurant.class);
+                intent.putExtras(bundel);
+                startActivity(intent);
             }
         });
     }
