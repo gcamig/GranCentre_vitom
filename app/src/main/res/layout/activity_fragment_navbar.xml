@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:background="#254441"
+    android:layout_gravity="">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/goback"
+        android:background="#00FFFFFF"
+        android:layout_weight="1"
+        android:contentDescription="@string/contentDescBack"
+        android:onClick="onClick"/>
+    <ImageButton
+        android:id="@+id/btnConfig"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/configuration"
+        android:background="#00FFFFFF"
+        android:layout_weight="1"
+        android:contentDescription="@string/contentDescConfig"
+        android:onClick="onClick"/>
+
+</LinearLayout>

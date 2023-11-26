@@ -28,6 +28,11 @@ public class Businesses extends AppCompatActivity {
         setContentView(R.layout.activity_businesses);
 
         iniViews();
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new Fragment_navbar())
+                    .commit();
+        }
     }
 
     private void iniViews(){

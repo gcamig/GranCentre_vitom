@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
     ImageButton b1,b2,b3,b4,b5,b6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +20,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b4 = findViewById(R.id.btnTransport);
         b5 = findViewById(R.id.btnBusiness);
         b6 = findViewById(R.id.btnEvents);
+
+        if (savedInstanceState == null){
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new Fragment_navbar())
+                    .commit();
+        }
     }
 
 
