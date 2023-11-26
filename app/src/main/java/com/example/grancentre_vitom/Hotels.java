@@ -21,6 +21,8 @@ public class Hotels extends AppCompatActivity {
     CustomAdapter customAdapter;
     String[] estrellas = {"Tots","5⭐", "4⭐", "3⭐", "2⭐", "1⭐"};
     //imatges ordenades dels hotels
+    ArrayList<hotel> hotelsList = getHotel();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +66,7 @@ public class Hotels extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ArrayList<hotel> hotelsList = getHotel();
+
 
                 Bundle bundel = new Bundle();
                 bundel.putString("nom", hotelsList.get(position).getNom());
@@ -132,12 +134,15 @@ public class Hotels extends AppCompatActivity {
         String [] restImg = new String[12];
         if(pos == 0) {
             customAdapter= new CustomAdapter(this,getHotelList(),getHotelImg());
+            hotelsList = getHotel();
         } else {
+            hotelsList.clear();
             int i=0;
             for (hotel r : getHotel()){
                 if (r.getStars() == pos) {
                     restList[i]= r.nom;
                     restImg[i] = r.imgUrl;
+                    hotelsList.add(r);
                     i++;
                 }
             }

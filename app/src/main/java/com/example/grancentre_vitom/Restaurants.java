@@ -19,6 +19,7 @@ public class Restaurants extends AppCompatActivity {
 ListView listView;
 Spinner spinner;
 CustomAdapter customAdapter;
+ArrayList<restaurant> restaurantsList = getRestaurant();
 String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants"};
 //imatges ordenades dels restaurants
     @Override
@@ -58,7 +59,6 @@ String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ArrayList<restaurant> restaurantsList = getRestaurant();
 
                 Bundle bundel = new Bundle();
                 bundel.putString("nom", restaurantsList.get(position).getNom());
@@ -126,12 +126,15 @@ String[] categories = {"Tots","Esmorzars", "Menja Rapid", "Mexica", "Restaurants
         String [] restImg = new String[12];
         if(pos == 0) {
             customAdapter= new CustomAdapter(this,getRestaurantList(),getRestaurantImg());
+            restaurantsList = getRestaurant();
         } else {
+            restaurantsList.clear();
             int i=0;
             for (restaurant r : getRestaurant()){
                 if (r.getType() == pos) {
                     restList[i]= r.nom;
                     restImg[i] = r.imgUrl;
+                    restaurantsList.add(r);
                     i++;
                 }
             }
