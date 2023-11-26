@@ -28,6 +28,19 @@ public class Fragment_navbar extends Fragment {
                 startActivity(intent);
             }
         });
+        bBack.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                getActivity().onBackPressed();
+            }
+        });
+        bConfig.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(getActivity(), Configuration.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }

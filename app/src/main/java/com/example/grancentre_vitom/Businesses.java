@@ -83,29 +83,29 @@ public class Businesses extends AppCompatActivity {
         ArrayList<business> data = new ArrayList<>();
         data.clear();
 
-        data.add(new business("Bershka",6,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/ntvorzs9cju1rvp0dlfl.jpg"));
-        data.add(new business("Adidas",6,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/li93b2aonvmiilfse3ec.jpg"));
-        data.add(new business("Calzedonia",6,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/zq0aoc887rfaxawpe9db.png"));
-        data.add(new business("Desigual",6,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/xvajbeqoaxigywwrvvoh.jpg"));
-        data.add(new business("Drim",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/bbhfmxygqk29gisdphnq.png"));
-        data.add(new business("Juguettos",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/izccunk7stgfaaqg4smr.png"));
-        data.add(new business("Lego Store",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/dodovmdzgcap7g0reb8b.jpg"));
-        data.add(new business("Dyson",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/tbegab93mrqobqylx1dk.png"));
-        data.add(new business("Gato Preto",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/mpioprelb9y1l902qr8n.png"));
-        data.add(new business("La Mallorquina",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/pvivrolzvnlmvahaqzsq.jpg"));
-        data.add(new business("Natura",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/gwqtfu9aelfdcaxdqtvz.png"));
-        data.add(new business("Apple",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/amnvadoexwv0dzogh3vt.png"));
-        data.add(new business("Casa del libro",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/iprlflymktju24s6lvrl.png"));
-        data.add(new business("Game",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/oj5ytom4heplagy7d9wf.png"));
-        data.add(new business("Fnac",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/wh9ut7gxqer4dv9igmo9.png"));
-        data.add(new business("Media Markt",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/mdposc97izase4its2lo.png"));
-        data.add(new business("Crocs",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/hite812d7f9cddxxqrxl.png"));
-        data.add(new business("Munich",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/raso2dbpgewn5kojurs9.png"));
-        data.add(new business("AW Lab",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/e1hswoenpboizhetz4o6.jpg"));
-        data.add(new business("Druni",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/f1xqpb5jeezc76nrftez.png"));
-        data.add(new business("Primor",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/onqepfvbf2rbzbgopknh.png"));
-        data.add(new business("Sephora",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/t0jlyjlbcri1qawwirw0.png"));
-        data.add(new business("Rituals",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/atx0rzszo73ncdz2glb5.png"));
+        data.add(new business("Bershka",6,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/ntvorzs9cju1rvp0dlfl.jpg","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","748242723\n"));
+        data.add(new business("Adidas",6,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/li93b2aonvmiilfse3ec.jpg","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","636348161"));
+        data.add(new business("Calzedonia",6,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/zq0aoc887rfaxawpe9db.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","769638782"));
+        data.add(new business("Desigual",6,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/xvajbeqoaxigywwrvvoh.jpg","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","641459754"));
+        data.add(new business("Drim",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/bbhfmxygqk29gisdphnq.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","736519600"));
+        data.add(new business("Juguettos",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/izccunk7stgfaaqg4smr.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","691700299"));
+        data.add(new business("Lego Store",5,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/dodovmdzgcap7g0reb8b.jpg","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","789366543"));
+        data.add(new business("Dyson",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/tbegab93mrqobqylx1dk.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","747712736"));
+        data.add(new business("Gato Preto",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/mpioprelb9y1l902qr8n.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","618102604"));
+        data.add(new business("La Mallorquina",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/pvivrolzvnlmvahaqzsq.jpg","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","714913443"));
+        data.add(new business("Natura",4,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/gwqtfu9aelfdcaxdqtvz.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","696711936"));
+        data.add(new business("Apple",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/amnvadoexwv0dzogh3vt.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","738501387"));
+        data.add(new business("Casa del libro",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/iprlflymktju24s6lvrl.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","719137122"));
+        data.add(new business("Game",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/oj5ytom4heplagy7d9wf.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","714982275"));
+        data.add(new business("Fnac",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/wh9ut7gxqer4dv9igmo9.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","641839238"));
+        data.add(new business("Media Markt",3,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/mdposc97izase4its2lo.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","619701749"));
+        data.add(new business("Crocs",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/hite812d7f9cddxxqrxl.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","632970449"));
+        data.add(new business("Munich",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/raso2dbpgewn5kojurs9.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","692939310"));
+        data.add(new business("AW Lab",2,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/e1hswoenpboizhetz4o6.jpg","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","761130287"));
+        data.add(new business("Druni",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/f1xqpb5jeezc76nrftez.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","794189611"));
+        data.add(new business("Primor",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/onqepfvbf2rbzbgopknh.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","756694612"));
+        data.add(new business("Sephora",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/t0jlyjlbcri1qawwirw0.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","641009985"));
+        data.add(new business("Rituals",1,"https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/atx0rzszo73ncdz2glb5.png","Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","724817600"));
 
         return data;
     }
@@ -160,10 +160,12 @@ class business{
     public String getNom() {return nom;}
     public int getCategory() {return category;}
     public String getImg() {return img;}
-    public business(String nom, int category, String img){
+    public business(String nom, int category, String img, String ubi, String tlf){
         this.nom = nom;
         this.category = category;
         this.img = img;
+        this.ubi = ubi;
+        this.tlf = tlf;
     }
 
     public String getUrl() {return url;}

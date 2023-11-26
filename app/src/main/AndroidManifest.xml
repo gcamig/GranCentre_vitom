@@ -15,6 +15,9 @@
         android:theme="@style/Theme.GranCentre_vitom"
         tools:targetApi="31">
         <activity
+            android:name=".Configuration"
+            android:exported="false" />
+        <activity
             android:name=".Fragment_navbar"
             android:exported="false" />
         <activity
