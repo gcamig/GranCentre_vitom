@@ -23,7 +23,7 @@ public class SingleBusiness extends AppCompatActivity {
         TextView businessName = findViewById(R.id.businessName),
                 businessCategory = findViewById(R.id.businessCategory),
                 businessTlf = findViewById(R.id.businessTlf),
-                businessUrl = findViewById(R.id.businessUrl),
+                //businessUrl = findViewById(R.id.businessUrl),
                 businessUbi = findViewById(R.id.businessUbi);
         ImageView businessImg = findViewById(R.id.businessImg);
         ImageButton bCall = findViewById(R.id.callBusiness),
