@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 
 public class SingleBusiness extends AppCompatActivity {
     String[] data = new String[6];
+    Boolean wheelchair;
     String[] categories;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +24,10 @@ public class SingleBusiness extends AppCompatActivity {
         TextView businessName = findViewById(R.id.businessName),
                 businessCategory = findViewById(R.id.businessCategory),
                 businessTlf = findViewById(R.id.businessTlf),
-                //businessUrl = findViewById(R.id.businessUrl),
+                businessUrl = findViewById(R.id.businessUrl),
                 businessUbi = findViewById(R.id.businessUbi);
-        ImageView businessImg = findViewById(R.id.businessImg);
+        ImageView businessImg = findViewById(R.id.businessImg),
+                wheelchairImg = findViewById(R.id.imgWheelchair);
         ImageButton bCall = findViewById(R.id.callBusiness),
                 bWeb = findViewById(R.id.webBusiness),
                 bUbi = findViewById(R.id.ubiBusiness);
@@ -42,12 +44,18 @@ public class SingleBusiness extends AppCompatActivity {
         data[3] = getbundle.getString("tlf");
         data[4] = getbundle.getString("ubi");
         data[5] = getbundle.getString("img");
+        wheelchair = getbundle.getBoolean("wheelchair");
 
         businessName.setText(data[0]);
         businessCategory.setText(data[1]);
-        businessTlf.setText(data[3]);
-        // businessUrl.setText(data[2]);
+        businessTlf.setText("Tlf: " + data[3]);
+        businessUrl.setText(data[2]);
         businessUbi.setText(data[4]);
+
+        if (wheelchair){
+            wheelchairImg.setImageResource(R.drawable.wheelchair);
+            wheelchairImg.setBackgroundColor(getColor(R.color.black));
+        }
 
         Glide.with(this)
                 .load(data[5])
@@ -70,7 +78,7 @@ public class SingleBusiness extends AppCompatActivity {
         bUbi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:"+data[4]));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=:"+data[4]));
                 startActivity(intent);
             }
         });
