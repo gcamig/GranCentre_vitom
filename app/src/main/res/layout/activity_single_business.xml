@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nombre"
-                android:textSize="30sp"></TextView>
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/businessCategory"
@@ -49,53 +49,79 @@
                 android:layout_height="wrap_content"
                 android:text="Telefono de contacto"
                 android:textSize="20sp" />
+
         </LinearLayout>
 
     </LinearLayout>
-    <LinearLayout
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageButton
-                android:id="@+id/callBusiness"
-                android:layout_width="150dp"
-                android:layout_height="60dp"
-                android:src="@drawable/call"
-                android:background="#254441"
-                android:layout_marginHorizontal="10dp" />
-            <TextView
+        <TableRow>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trucar"
-                android:textSize="20sp"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <ImageButton
-                android:id="@+id/webBusiness"
-                android:layout_width="150dp"
-                android:layout_height="60dp"
-                android:src="@drawable/web"
-                android:background="#254441"
-                android:layout_marginHorizontal="10dp" />
-            <TextView
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/callBusiness"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/call"
+                    android:background="#254441"
+                    android:layout_marginHorizontal="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trucar"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pàgina Web"
-                android:textSize="20sp"/>
-        </LinearLayout>
-    </LinearLayout>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/webBusiness"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/web"
+                    android:background="#254441"
+                    android:layout_marginHorizontal="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pàgina Web"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </TableRow>
+        <TableRow>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/ubiBusiness"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/web"
+                    android:background="#254441"
+                    android:layout_marginHorizontal="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ubicació"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+        </TableRow>
+
+    </TableLayout>
+
     <TextView
         android:id="@+id/businessUbi"
         android:layout_width="match_parent"

@@ -27,7 +27,8 @@ public class SingleBusiness extends AppCompatActivity {
                 businessUbi = findViewById(R.id.businessUbi);
         ImageView businessImg = findViewById(R.id.businessImg);
         ImageButton bCall = findViewById(R.id.callBusiness),
-                bWeb = findViewById(R.id.webBusiness);
+                bWeb = findViewById(R.id.webBusiness),
+                bUbi = findViewById(R.id.ubiBusiness);
 
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
@@ -45,7 +46,7 @@ public class SingleBusiness extends AppCompatActivity {
         businessName.setText(data[0]);
         businessCategory.setText(data[1]);
         businessTlf.setText(data[3]);
-        businessUrl.setText(data[2]);
+        // businessUrl.setText(data[2]);
         businessUbi.setText(data[4]);
 
         Glide.with(this)
@@ -63,6 +64,13 @@ public class SingleBusiness extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(data[2]));
+                startActivity(intent);
+            }
+        });
+        bUbi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:"+data[4]));
                 startActivity(intent);
             }
         });
