@@ -12,9 +12,9 @@
         android:layout_height="80dp">
 
     </FrameLayout>
-    <TextView
+    <com.skydoves.colorpickerview.ColorPickerView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="Siu"
-        android:textSize="40dp"/>
+        android:layout_height="500dp"
+        />
+
 </LinearLayout>
