@@ -89,7 +89,6 @@ String[] categories;
         //String[] categories = {"Tots","Esmorzar", "Menja Rapid", "Mexica", "Restaurants"};
         //0:tots, 1:Esmorzar, 2:Menja Rapid, 3:Mexica, 4:Restaurants
         //nom, tipus, web, tlf, ubi
-
         //data.add(new restaurant(""))
         data.add(new restaurant("La tremenda", 4,"https://latremenda.com/" ,"931716897" ,"Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain", "https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/xgchmwunby4hasiobwdq.png"));
         data.add(new restaurant("La Tradicional", 4, "https://latradicionaltapas.es/", "930400564", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/ew1ke3macv55lr4gmv2w.png"));
