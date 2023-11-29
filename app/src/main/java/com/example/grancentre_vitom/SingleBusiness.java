@@ -70,7 +70,7 @@ public class SingleBusiness extends AppCompatActivity {
         bUbi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:"+data[4]));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q="+data[4]));
                 startActivity(intent);
             }
         });
