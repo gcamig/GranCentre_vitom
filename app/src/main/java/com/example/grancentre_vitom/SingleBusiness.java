@@ -22,7 +22,7 @@ public class SingleBusiness extends AppCompatActivity {
                     .commit();
         }
         Bundle getbundle = getIntent().getExtras();
-        data[0] = getbundle.getString("nom");
+        data[0] = getbundle.getString("name");
         data[1] = categories[getbundle.getInt("category")];
         data[2] = getbundle.getString("url");
         data[3] = getbundle.getString("tlf");

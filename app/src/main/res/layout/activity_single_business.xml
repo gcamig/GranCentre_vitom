@@ -52,6 +52,27 @@
         </LinearLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/callBusiness"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/call"
+            android:background="#254441"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp" />
+        <ImageButton
+            android:id="@+id/webBusiness"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:src="@drawable/web"
+            android:background="#254441"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp" />
+    </LinearLayout>
     <TextView
         android:id="@+id/businessUrl"
         android:layout_width="match_parent"
