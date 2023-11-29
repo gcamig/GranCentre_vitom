@@ -2,7 +2,11 @@ package com.example.grancentre_vitom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +20,15 @@ public class SingleBusiness extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_business);
         categories = getResources().getStringArray(R.array.businessTypes);
+        TextView businessName = findViewById(R.id.businessName),
+                businessCategory = findViewById(R.id.businessCategory),
+                businessTlf = findViewById(R.id.businessTlf),
+                businessUrl = findViewById(R.id.businessUrl),
+                businessUbi = findViewById(R.id.businessUbi);
+        ImageView businessImg = findViewById(R.id.businessImg);
+        ImageButton bCall = findViewById(R.id.callBusiness),
+                bWeb = findViewById(R.id.webBusiness);
+
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.fragment_container, new Fragment_navbar())
@@ -29,22 +42,30 @@ public class SingleBusiness extends AppCompatActivity {
         data[4] = getbundle.getString("ubi");
         data[5] = getbundle.getString("img");
 
-        TextView businessName = findViewById(R.id.businessName);
-        TextView businessCategory = findViewById(R.id.businessCategory);
-        TextView businessTlf = findViewById(R.id.businessTlf);
-        ImageView businessImg = findViewById(R.id.businessImg);
-        TextView businessUrl = findViewById(R.id.businessUrl);
-        TextView businessUbi = findViewById(R.id.businessUbi);
-
         businessName.setText(data[0]);
         businessCategory.setText(data[1]);
         businessTlf.setText(data[3]);
         businessUrl.setText(data[2]);
         businessUbi.setText(data[4]);
 
-
         Glide.with(this)
                 .load(data[5])
                 .into(businessImg);
+
+        bCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+data[3]));
+                startActivity(intent);
+            }
+        });
+        bWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(data[2]));
+                startActivity(intent);
+            }
+        });
+
     }
 }
