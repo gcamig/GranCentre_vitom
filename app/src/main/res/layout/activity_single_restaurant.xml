@@ -52,6 +52,30 @@
     </LinearLayout>
 
 </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageButton
+            android:id="@+id/call_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#254441"
+            android:src="@drawable/call"
+            />
+        <ImageButton
+            android:id="@+id/web_restaurant"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#254441"
+            android:src="@drawable/web"
+            />
+    </LinearLayout>
     <TextView
         android:id="@+id/rest_web"
         android:layout_width="match_parent"

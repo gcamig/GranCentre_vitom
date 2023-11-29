@@ -85,6 +85,7 @@ String[] categories;
         ArrayList<restaurant> data = new ArrayList<>();
         data.clear();
 
+        //Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain
         //String[] categories = {"Tots","Esmorzar", "Menja Rapid", "Mexica", "Restaurants"};
         //0:tots, 1:Esmorzar, 2:Menja Rapid, 3:Mexica, 4:Restaurants
         //nom, tipus, web, tlf, ubi

@@ -2,7 +2,11 @@ package com.example.grancentre_vitom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,16 +46,33 @@ public class SingleRestaurant extends AppCompatActivity {
         TextView web = findViewById(R.id.rest_web);
         TextView tel = findViewById(R.id.rest_tel);
         TextView ubi = findViewById(R.id.rest_ubi);
-
+        ImageButton bCall = findViewById(R.id.call_restaurant);
+        ImageButton bWeb = findViewById(R.id.web_restaurant);
 
         nom.setText(data[0]);
         type.setText(data[1]);
         web.setText("Enllaç web: " + data[2]);
         tel.setText("Telefon: "+ data[3]);
-        ubi.setText("Ubicacio: "+data[4]);
+        ubi.setText("Ubicacio:" + data[4]);
 
         Glide.with(this)
                 .load(data[5])
                 .into(Img);
+
+
+        bCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+data[3]));
+                startActivity(intent);
+            }
+        });
+        bWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(data[2]));
+                startActivity(intent);
+            }
+        });
     }
 }
