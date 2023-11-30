@@ -48,12 +48,12 @@ public class SingleRestaurant extends AppCompatActivity {
         TextView ubi = findViewById(R.id.rest_ubi);
         ImageButton bCall = findViewById(R.id.call_restaurant);
         ImageButton bWeb = findViewById(R.id.web_restaurant);
+        ImageButton bUbi = findViewById(R.id.ubi_restaurant);
 
         nom.setText(data[0]);
         type.setText(data[1]);
-        web.setText("Enllaç web: " + data[2]);
         tel.setText("Telefon: "+ data[3]);
-        ubi.setText("Ubicacio:" + data[4]);
+
 
         Glide.with(this)
                 .load(data[5])
@@ -71,6 +71,13 @@ public class SingleRestaurant extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(data[2]));
+                startActivity(intent);
+            }
+        });
+        bUbi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=:"+data[4]));
                 startActivity(intent);
             }
         });

@@ -89,20 +89,19 @@ String[] categories;
         //String[] categories = {"Tots","Esmorzar", "Menja Rapid", "Mexica", "Restaurants"};
         //0:tots, 1:Esmorzar, 2:Menja Rapid, 3:Mexica, 4:Restaurants
         //nom, tipus, web, tlf, ubi
-
         //data.add(new restaurant(""))
-        data.add(new restaurant("La tremenda", 4,"https://latremenda.com/" ,"931716897" ,"41.44294,2.20018", "https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/xgchmwunby4hasiobwdq.png"));
-        data.add(new restaurant("La Tradicional", 4, "https://latradicionaltapas.es/", "930400564", "41.44101799298387,2.1984500499960298","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/ew1ke3macv55lr4gmv2w.png"));
-        data.add(new restaurant("Crep Nova", 4, "https://www.crepnova.com/", "931564445", "41.44295916318629, 2.200000488170791","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/i28sdrypjo7qtmnsemcc.jpg"));
-        data.add(new restaurant("Farggi 1957", 1, "https://www.farggicafe.com/", "933011018", "41.44012061412995, 2.1985896388934534","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/g75a018efhvfdntgavei.png"));
-        data.add(new restaurant("Starbucks", 1, "https://www.starbucks.es/", "935216257", "41.44208686620995, 2.1984668100577798","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/kqejqiplso7upnqra6yv.png"));
-        data.add(new restaurant("MANOLO BAKES", 1, "https://www.manolobakes.com/", "930134526", "41.439535429909355, 2.196971938893445", "https://weareevolbe.com/wp-content/uploads/2022/06/MANOLO-BAKES_LOGO.png"));
-        data.add(new restaurant("Burger King", 2, "https://www.burgerking.es/home", "933608953", "41.44081375561922, 2.197923425400824","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/wubbuveuoseyanubltfd.jpg"));
-        data.add(new restaurant("KFC - Kentucky Fried Chicken", 2, "https://www.kfc.es/", "933609873", "41.43919621584857, 2.197391981221852","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/bvwrhxjnjdyi77tij3sw.jpg"));
-        data.add(new restaurant("Mc Donald's", 2, "https://mcdonalds.es/", "938339106", "41.44289645148902, 2.20023189656514","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/b6ursf9o3pfoaxf7afm4.png"));
-        data.add(new restaurant("I Love Empanada", 3, "https://www.iloveempanada.com/", "645558408", "41.43986468592533, 2.1983984407438713","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/aqomkshoz2hocjj8gdcp.png"));
-        data.add(new restaurant("OAKBERRY", 3, "https://www.oakberry.com/es-es", "685226513", "41.443106550572345, 2.1990305834373913","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/hxqax8xnwcgclqdyftfd.jpg"));
-        data.add(new restaurant("TACO BELL", 3, "https://tacobell.es/", "933608982", "41.440959255330675, 2.198054156087031","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/gfci4qsarkgdzt0b9csf.png"));
+        data.add(new restaurant("La tremenda", 4,"https://latremenda.com/" ,"931716897" ,"Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain", "https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/xgchmwunby4hasiobwdq.png"));
+        data.add(new restaurant("La Tradicional", 4, "https://latradicionaltapas.es/", "930400564", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/ew1ke3macv55lr4gmv2w.png"));
+        data.add(new restaurant("Crep Nova", 4, "https://www.crepnova.com/", "931564445", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/i28sdrypjo7qtmnsemcc.jpg"));
+        data.add(new restaurant("Farggi 1957", 1, "https://www.farggicafe.com/", "933011018", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/g75a018efhvfdntgavei.png"));
+        data.add(new restaurant("Starbucks", 1, "https://www.starbucks.es/", "935216257", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/kqejqiplso7upnqra6yv.png"));
+        data.add(new restaurant("MANOLO BAKES", 1, "https://www.manolobakes.com/", "930134526", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain", "https://weareevolbe.com/wp-content/uploads/2022/06/MANOLO-BAKES_LOGO.png"));
+        data.add(new restaurant("Burger King", 2, "https://www.burgerking.es/home", "933608953", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/wubbuveuoseyanubltfd.jpg"));
+        data.add(new restaurant("KFC - Kentucky Fried Chicken", 2, "https://www.kfc.es/", "933609873", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/bvwrhxjnjdyi77tij3sw.jpg"));
+        data.add(new restaurant("Mc Donald's", 2, "https://mcdonalds.es/", "938339106", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/b6ursf9o3pfoaxf7afm4.png"));
+        data.add(new restaurant("I Love Empanada", 3, "https://www.iloveempanada.com/", "645558408", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/aqomkshoz2hocjj8gdcp.png"));
+        data.add(new restaurant("OAKBERRY", 3, "https://www.oakberry.com/es-es", "685226513", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/hxqax8xnwcgclqdyftfd.jpg"));
+        data.add(new restaurant("TACO BELL", 3, "https://tacobell.es/", "933608982", "Paseo Potosi, 2 El Bon Pastor, 08030 Barcelona Spain","https://res.cloudinary.com/westfielddg/image/upload/westfield-media/es/retailer/logos/gfci4qsarkgdzt0b9csf.png"));
         return data;
 
     }

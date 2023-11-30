@@ -57,41 +57,65 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         >
-        <ImageButton
-            android:id="@+id/call_restaurant"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#254441"
-            android:src="@drawable/call"
-            />
-        <ImageButton
-            android:id="@+id/web_restaurant"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/call_restaurant"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:src="@drawable/call"
+                android:background="#254441"
+                android:layout_marginHorizontal="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trucar"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#254441"
-            android:src="@drawable/web"
-            />
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/web_restaurant"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:src="@drawable/web"
+                android:background="#254441"
+                android:layout_marginHorizontal="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pàgina Web"
+                android:textSize="20sp"/>
+        </LinearLayout>
     </LinearLayout>
-    <TextView
-        android:id="@+id/rest_web"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="enlace web"
-        android:textSize="20sp"
-        android:layout_marginTop="3dp"
-        android:layout_marginLeft="5dp"
-        />
-    <TextView
-        android:id="@+id/rest_ubi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="enlace ubicacion"
-        android:textSize="20sp"
-        android:layout_marginTop="3dp"
-        android:layout_marginLeft="5dp"
-        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/ubi_restaurant"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:src="@drawable/web"
+                android:background="#254441"
+                android:layout_marginHorizontal="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubicació"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
 </LinearLayout>
