@@ -22,14 +22,14 @@
         android:text="Hotels"
         android:gravity="center"
         android:layout_margin="10dp"
-    />
+        />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-    >
+        >
 
 
         <TextView
@@ -38,14 +38,14 @@
             android:text="Filtrar hotels"
             android:textSize="20sp"
             android:layout_margin="10dp"
-        />
+            />
         <Spinner
             android:id="@+id/filtreHotels"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_margin="10dp"
             android:gravity="center"
-        />
+            />
 
     </LinearLayout>
     <ListView
@@ -53,5 +53,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-    />
+        />
 </LinearLayout>

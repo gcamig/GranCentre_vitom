@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".SingleHotel"
     android:orientation="vertical">
-
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
@@ -15,38 +14,113 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-
-    <TextView
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:id="@+id/nomH"
-        ></TextView>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:id="@+id/stars"
-        />
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/resHotelImg"
-        android:contentDescription="Items de lista"
-        />
-
+        android:orientation="horizontal">
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/callHotel"
-            android:src="@drawable/call"
-            android:onClick="onClick"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:id="@+id/hotel_img"
+            android:padding="5dp"
+            android:contentDescription="Logo Hotel"
+            android:backgroundTint="@color/white"
             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="3dp">
+
+            <TextView
+                android:id="@+id/hotel_nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="30sp"></TextView>
+
+            <TextView
+                android:id="@+id/hotel_stars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 estrellas"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/hotel_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefono de contacto"
+                android:textSize="20sp" />
+        </LinearLayout>
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/call_hotel"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:src="@drawable/call"
+                android:background="#254441"
+                android:layout_marginHorizontal="10dp"
+                android:contentDescription="Botón Llamar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trucar"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/web_hotel"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:src="@drawable/web"
+                android:background="#254441"
+                android:layout_marginHorizontal="10dp"
+                android:contentDescription="Botón WebSite"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pàgina Web"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/ubi_hotel"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:src="@drawable/map"
+            android:background="#254441"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="Botón Mapa"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicació"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
 </LinearLayout>

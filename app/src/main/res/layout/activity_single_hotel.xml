@@ -21,12 +21,14 @@
             android:layout_height="130dp"
             android:id="@+id/hotel_img"
             android:padding="5dp"
+            android:contentDescription="Logo Hotel"
+            android:backgroundTint="@color/white"
             />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="3dp">
+            android:layout_marginStart="3dp">
 
             <TextView
                 android:id="@+id/hotel_nom"
@@ -55,6 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:baselineAligned="false"
         >
         <LinearLayout
             android:layout_width="wrap_content"
@@ -68,7 +71,8 @@
                 android:layout_height="60dp"
                 android:src="@drawable/call"
                 android:background="#254441"
-                android:layout_marginHorizontal="10dp" />
+                android:layout_marginHorizontal="10dp"
+                android:contentDescription="Botón Llamar"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,7 +91,8 @@
                 android:layout_height="60dp"
                 android:src="@drawable/web"
                 android:background="#254441"
-                android:layout_marginHorizontal="10dp" />
+                android:layout_marginHorizontal="10dp"
+                android:contentDescription="Botón WebSite"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,9 +112,10 @@
             android:id="@+id/ubi_hotel"
             android:layout_width="150dp"
             android:layout_height="60dp"
-            android:src="@drawable/web"
+            android:src="@drawable/map"
             android:background="#254441"
-            android:layout_marginHorizontal="10dp" />
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="Botón Mapa"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
