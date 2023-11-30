@@ -27,6 +27,12 @@
         <item>Juguetes</item>
         <item>Moda</item>
     </string-array>
+    <string-array name="eventCategories">
+        <item>Todos</item>
+        <item>Exposiciones</item>
+        <item>Festivales</item>
+        <item>Conciertos</item>
+    </string-array>
 
     <string-array name="starsIc">
         <item>Tots</item>

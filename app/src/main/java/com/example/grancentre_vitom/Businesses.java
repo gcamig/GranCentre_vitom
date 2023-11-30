@@ -26,7 +26,6 @@ public class Businesses extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_businesses);
-
         iniViews();
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
