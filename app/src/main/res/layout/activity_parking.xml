@@ -6,7 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Parking"
     android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
 
+    </FrameLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,7 +63,12 @@
         android:textSize="17dp"
         android:layout_margin="5dp"
         />
-
+    <ImageButton
+        android:id="@+id/pk_detall1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/info"
+        ></ImageButton>
     <TextView
         android:id="@+id/pk_nom2"
         android:layout_width="wrap_content"
@@ -66,7 +76,6 @@
         android:text="Nom del parking"
         android:textSize="17dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
         />
 
     <LinearLayout
@@ -102,6 +111,12 @@
         android:textSize="17dp"
         android:layout_margin="5dp"
         />
+    <ImageButton
+        android:id="@+id/pk_detall2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/info"
+        ></ImageButton>
 
     <TextView
         android:id="@+id/pk_nom3"
@@ -110,7 +125,7 @@
         android:text="Nom del parking"
         android:textSize="17dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="30dp"
+
         />
 
     <LinearLayout
@@ -146,4 +161,10 @@
         android:textSize="17dp"
         android:layout_margin="5dp"
         />
+    <ImageButton
+        android:id="@+id/pk_detall3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/info"
+        ></ImageButton>
 </LinearLayout>
