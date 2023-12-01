@@ -35,7 +35,7 @@ public class Businesses extends AppCompatActivity {
     }
 
     private void iniViews(){
-        categories = getResources().getStringArray(R.array.businessTypes);
+        categories = getResources().getStringArray(R.array.businessCategories);
         spinner = findViewById(R.id.filtreBusiness);
         spinner.setAdapter(new ArrayAdapter<>(
                 this,
