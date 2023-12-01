@@ -5,4 +5,7 @@
     <color name="gray2">#535353</color>
     <color name="white">#FFFFFFFF</color>
     <color name="green">#4CAF50</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent1">#3E000000</color>
+    <color name="transparent2">#34D900FF</color>
 </resources>
