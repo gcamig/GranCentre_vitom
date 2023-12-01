@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -51,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //tio.show();
         }
         else if (view.getId() == b4.getId()){
-            Intent intent = new Intent(this, Transport.class);
+            Intent intent = new Intent(this, Parking.class);
             startActivity(intent);
             //Toast tio = Toast.makeText(this, "Pagina de Transporte", Toast.LENGTH_SHORT);
             //tio.show();
