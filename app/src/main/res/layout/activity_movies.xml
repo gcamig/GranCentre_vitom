@@ -39,6 +39,8 @@
          app:cardMaxElevation="12dp"
          app:cardPreventCornerOverlap="true"
          app:cardUseCompatPadding="true"
+         android:id="@+id/peli1"
+         android:onClick="onClick"
          >
          <LinearLayout
              android:layout_width="match_parent"
@@ -50,7 +52,7 @@
              android:backgroundTint="@color/transparent"
              android:id="@+id/peli1cart"
              >
-             <TextView
+             <TextView style="?android:textAppearanceMedium"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:text="The Hunger Games - Songbirds and Snakes"
@@ -62,6 +64,7 @@
                  android:textColor="@color/white"
                  android:background="@color/transparent1"
                  android:id="@+id/peli1title"
+                 android:visibility="invisible"
                  />
              <TextView
                  android:layout_width="match_parent"
@@ -74,6 +77,7 @@
                  android:textColor="@color/white"
                  android:background="@color/transparent1"
                  android:id="@+id/peli1temp"
+                 android:visibility="invisible"
                  />
              <LinearLayout
                  android:layout_width="match_parent"
@@ -90,6 +94,7 @@
                      android:backgroundTint="@color/transparent"
                      android:id="@+id/peli1tiket"
                      android:onClick="onClick"
+                     android:visibility="invisible"
                      />
              </LinearLayout>
          </LinearLayout>
