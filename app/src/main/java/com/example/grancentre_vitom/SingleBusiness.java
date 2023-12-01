@@ -20,7 +20,7 @@ public class SingleBusiness extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_business);
-        categories = getResources().getStringArray(R.array.businessTypes);
+        categories = getResources().getStringArray(R.array.businessCategories);
         TextView businessName = findViewById(R.id.businessName),
                 businessCategory = findViewById(R.id.businessCategory),
                 businessTlf = findViewById(R.id.businessTlf),

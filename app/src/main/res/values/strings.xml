@@ -9,8 +9,6 @@
     <string name="contentDescConfig">Config image</string>
     <string name="contentDescBack">Back image</string>
     <string name="contentDescHome">Home image</string>
-
-    // Creamos el array de string que sera el del menu desplegable
     <string-array name="restaurantTypes">
         <item> Tots </item>
         <item> Esmorzars </item>
@@ -18,7 +16,7 @@
         <item> Mexica </item>
         <item> Restaurants </item>
     </string-array>
-    <string-array name="businessTypes">
+    <string-array name="businessCategories">
         <item>Todos</item>
         <item>Belleza</item>
         <item>Calzado</item>
