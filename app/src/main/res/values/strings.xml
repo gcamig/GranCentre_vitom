@@ -9,6 +9,7 @@
     <string name="contentDescConfig">Config image</string>
     <string name="contentDescBack">Back image</string>
     <string name="contentDescHome">Home image</string>
+    <string name="deixa_el_teu_comentari">Deixa el teu comentari...</string>
     <string-array name="restaurantTypes">
         <item> Tots </item>
         <item> Esmorzars </item>

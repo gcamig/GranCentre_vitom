@@ -15,14 +15,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
         <ImageView
             android:layout_width="130dp"
             android:layout_height="130dp"
             android:id="@+id/hotel_img"
             android:padding="5dp"
             android:contentDescription="Logo Hotel"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/gray2"
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -70,7 +71,7 @@
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:src="@drawable/call"
-                android:background="#254441"
+                android:background="#8B6CC6"
                 android:layout_marginHorizontal="10dp"
                 android:contentDescription="Botón Llamar"/>
             <TextView
@@ -90,7 +91,7 @@
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:src="@drawable/web"
-                android:background="#254441"
+                android:background="#8B6CC6"
                 android:layout_marginHorizontal="10dp"
                 android:contentDescription="Botón WebSite"/>
             <TextView
@@ -113,7 +114,7 @@
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:src="@drawable/map"
-            android:background="#254441"
+            android:background="#8B6CC6"
             android:layout_marginHorizontal="10dp"
             android:contentDescription="Botón Mapa"/>
         <TextView
@@ -122,5 +123,58 @@
             android:text="Ubicació"
             android:textSize="20sp"/>
     </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/gray2"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:background="@color/gray2">
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:isIndicator="false"
+                android:background="@color/gray2"
 
+                />
+
+            <EditText
+                android:id="@+id/editTextComment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="4dp"
+                android:hint="@string/deixa_el_teu_comentari"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:gravity="center"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="5dp"
+                android:id="@+id/btEnviarComent"
+                android:text="Enviar Ressenya"
+                android:backgroundTint="@color/green"
+                android:layout_marginTop="2dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>
