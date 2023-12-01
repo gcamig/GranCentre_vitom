@@ -2,7 +2,11 @@ package com.example.grancentre_vitom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -12,6 +16,7 @@ public class Parking extends AppCompatActivity {
     TextView ubi1, ubi2, ubi3;
     TextView places1, places2, places3;
     TextView disp1, disp2, disp3;
+    ImageButton bt1, bt2, bt3;
     ArrayList<ParkingsClass> parkings = getParkings();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,34 @@ public class Parking extends AppCompatActivity {
         introduirUbi();
         introduirDisponibles();
         introduirPlaces();
+
+        buscarDireccio();
+    }
+
+    private void buscarDireccio() {
+        bt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=:" + parkings.get(0).ubi));
+                startActivity(intent);
+            }
+        });
+
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=:" + parkings.get(1).ubi));
+                startActivity(intent);
+            }
+        });
+
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=:" + parkings.get(2).ubi));
+                startActivity(intent);
+            }
+        });
     }
 
     private void getiID() {
@@ -47,12 +80,16 @@ public class Parking extends AppCompatActivity {
         disp1 = findViewById(R.id.pk_disp1);
         disp2 = findViewById(R.id.pk_disp2);
         disp3 = findViewById(R.id.pk_disp3);
+
+        bt1 = findViewById(R.id.pk_detall1);
+        bt2 = findViewById(R.id.pk_detall2);
+        bt3 = findViewById(R.id.pk_detall3);
     }
 
     private void introduirNom() {
         nom1.setText(parkings.get(0).nom);
         nom2.setText(parkings.get(1).nom);
-        nom2.setText(parkings.get(2).nom);
+        nom3.setText(parkings.get(2).nom);
     }
     private void introduirUbi() {
         ubi1.setText(parkings.get(0).ubi);
@@ -78,6 +115,7 @@ public class Parking extends AppCompatActivity {
         data.add(new ParkingsClass("Parc De Les Pruneres PARKIA", "Rambla Pompeu Fabra, 9-19, 8100, Mollet del Valles", "138", "80"));
         return data;
     }
+
 }
 
 
