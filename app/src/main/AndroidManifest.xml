@@ -45,7 +45,7 @@
             android:name=".Businesses"
             android:exported="false" />
         <activity
-            android:name=".Transport"
+            android:name=".Parking"
             android:exported="false" />
         <activity
             android:name=".Restaurants"
