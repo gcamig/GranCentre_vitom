@@ -1,11 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Parking">
+    tools:context=".Parking"
+    android:orientation="vertical">
 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
 
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PARKINGS DISPONIBLES"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/pk_nom1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom del parking"
+        android:textSize="17dp"
+        android:layout_margin="5dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/pk_places1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Places: 214"
+            android:textSize="17dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/pk_disp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disponibles 109"
+            android:textSize="17dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pk_dir1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Direccio: L'Hostal - Lledoner, Granollers, Barcelona (provincia)"
+        android:textSize="17dp"
+        android:layout_margin="5dp"
+        />
+    <ImageButton
+        android:id="@+id/pk_detall1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/info"
+        ></ImageButton>
+    <TextView
+        android:id="@+id/pk_nom2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom del parking"
+        android:textSize="17dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/pk_places2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Places: 214"
+            android:textSize="17dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/pk_disp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disponibles 109"
+            android:textSize="17dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pk_dir2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Direccio: L'Hostal - Lledoner, Granollers, Barcelona (provincia)"
+        android:textSize="17dp"
+        android:layout_margin="5dp"
+        />
+    <ImageButton
+        android:id="@+id/pk_detall2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/info"
+        ></ImageButton>
+
+    <TextView
+        android:id="@+id/pk_nom3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nom del parking"
+        android:textSize="17dp"
+        android:layout_marginLeft="5dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/pk_places3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Places: 214"
+            android:textSize="17dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/pk_disp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disponibles 109"
+            android:textSize="17dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pk_dir3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Direccio: L'Hostal - Lledoner, Granollers, Barcelona (provincia)"
+        android:textSize="17dp"
+        android:layout_margin="5dp"
+        />
+    <ImageButton
+        android:id="@+id/pk_detall3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/info"
+        ></ImageButton>
+</LinearLayout>
