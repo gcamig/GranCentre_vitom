@@ -41,16 +41,18 @@
             android:contentDescription="@string/contentDescRestaurants"
             android:layout_weight="1"
             android:onClick="onClick"/>
+
         <ImageButton
             android:id="@+id/btnBusiness"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:layout_margin="10dp"
-            android:background="@color/pinkNight"
-            android:src="@drawable/business"
-            android:contentDescription="@string/contentDescBusiness"
             android:layout_weight="1"
-            android:onClick="onClick"/>
+            android:background="@color/pinkNight"
+            android:contentDescription="@string/contentDescBusiness"
+            android:onClick="onClick"
+            android:src="@drawable/business"
+            tools:ignore="ImageContrastCheck" />
     </TableRow>
     <TableRow>
         <ImageButton
