@@ -32,6 +32,7 @@
             android:contentDescription="@string/contentDescHotels"
             android:layout_weight="1"
             android:onClick="onClick" />
+
         <ImageButton
             android:id="@+id/btnMovies"
             android:layout_width="140dp"
