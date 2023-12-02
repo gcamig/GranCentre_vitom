@@ -93,7 +93,6 @@
                     android:layout_height="wrap_content"
                     app:cardElevation="10dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_margin="5dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardMaxElevation="12dp"
                     app:cardPreventCornerOverlap="true"
@@ -103,7 +102,7 @@
                     android:contentDescription="@string/desc_pelicard1"
                     >
                     <LinearLayout
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:background="@drawable/peli1"
@@ -166,7 +165,6 @@
                     android:layout_height="wrap_content"
                     app:cardElevation="10dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_margin="5dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardMaxElevation="12dp"
                     app:cardPreventCornerOverlap="true"
@@ -176,7 +174,7 @@
                     android:contentDescription="@string/desc_pelicard2"
                     >
                     <LinearLayout
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:background="@drawable/peli2"
@@ -239,7 +237,6 @@
                     android:layout_height="wrap_content"
                     app:cardElevation="10dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_margin="5dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardMaxElevation="12dp"
                     app:cardPreventCornerOverlap="true"
@@ -249,7 +246,7 @@
                     android:contentDescription="@string/desc_pelicard3"
                     >
                     <LinearLayout
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:background="@drawable/peli3"
@@ -312,7 +309,6 @@
                     android:layout_height="wrap_content"
                     app:cardElevation="10dp"
                     app:cardCornerRadius="20dp"
-                    android:layout_margin="5dp"
                     app:cardBackgroundColor="@color/white"
                     app:cardMaxElevation="12dp"
                     app:cardPreventCornerOverlap="true"
@@ -322,7 +318,7 @@
                     android:contentDescription="@string/desc_pelicard4"
                     >
                     <LinearLayout
-                        android:layout_width="200dp"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:background="@drawable/peli4"

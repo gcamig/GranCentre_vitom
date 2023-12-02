@@ -43,9 +43,7 @@ public class SingleRestaurant extends AppCompatActivity {
         ImageView Img = findViewById(R.id.rest_img);
         TextView nom = findViewById(R.id.rest_nom);
         TextView type = findViewById(R.id.rest_type);
-        TextView web = findViewById(R.id.rest_web);
         TextView tel = findViewById(R.id.rest_tel);
-        TextView ubi = findViewById(R.id.rest_ubi);
         ImageButton bCall = findViewById(R.id.call_restaurant);
         ImageButton bWeb = findViewById(R.id.web_restaurant);
         ImageButton bUbi = findViewById(R.id.ubi_restaurant);
