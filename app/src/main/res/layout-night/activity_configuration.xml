@@ -12,10 +12,47 @@
         android:layout_height="80dp">
 
     </FrameLayout>
-    <com.skydoves.colorpickerview.ColorPickerView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <com.skydoves.colorpickerview.ColorPickerView
+            android:id="@+id/selector"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            />
+        <com.skydoves.colorpickerview.sliders.BrightnessSlideBar
+            android:id="@+id/brightnessSlideBar"
+            app:selector_BrightnessSlider="@drawable/wheel"
+            android:layout_width="280dp"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    <LinearLayout
         android:layout_margin="20dp"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/colorValue"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:id="@+id/selectedColor"
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
 
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnSubmitColor"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cambiar"
+            android:textSize="20sp"/>
+    </LinearLayout>
 </LinearLayout>
