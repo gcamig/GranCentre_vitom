@@ -2,12 +2,16 @@ package com.example.grancentre_vitom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -21,9 +25,15 @@ public class Businesses extends AppCompatActivity {
     CustomAdapter adapter;
     String[] categories;
     ArrayList<business> businessesList = getBusiness();
+    LinearLayout bLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /* Aquí estava intentat utilitzar el SharedPreferences però no m'ha acabat de funcionar
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+        int colorFondo = sharedPref.getInt("backColor", Color.WHITE);
+        bLayout = findViewById(R.id.businessLayout);
+        bLayout.setBackgroundColor(colorFondo);*/
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_businesses);
         iniViews();
