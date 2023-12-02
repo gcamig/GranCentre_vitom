@@ -22,12 +22,57 @@
      <TextView
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text="TOTES LES PEL·LÍCULES"
+         android:text="@string/totes_les_pelis"
          android:textStyle="bold"
          android:gravity="center"
          android:layout_marginVertical="10dp"
          android:textSize="18sp"
          />
+
+     <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:cardElevation="10dp"
+         app:cardCornerRadius="20dp"
+         app:cardBackgroundColor="@color/gray"
+         app:cardMaxElevation="12dp"
+         app:cardPreventCornerOverlap="true"
+         app:cardUseCompatPadding="true"
+         >
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="15dp"
+             android:gravity="center"
+             >
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/horario_de_apertura"
+                 android:gravity="center"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/lunes_a_jueves_abierto_de_15_30_a_1_00"
+                 android:gravity="center"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/viernes_abierto_de_15_30_a_2_30"
+                 android:gravity="center"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/s_bado_abierto_de_12_00_a_2_00"
+                 android:gravity="center"/>
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="@string/domingo_abierto_de_12_00_a_1_00"
+                 android:gravity="center"/>
+         </LinearLayout>
+     </androidx.cardview.widget.CardView>
 
      <!-- PELI 1 -->
      <androidx.cardview.widget.CardView
@@ -42,7 +87,7 @@
          app:cardUseCompatPadding="true"
          android:id="@+id/peli1"
          android:onClick="onClick"
-         android:contentDescription="peliCard1"
+         android:contentDescription="@string/desc_pelicard1"
          >
          <LinearLayout
              android:layout_width="match_parent"
@@ -57,7 +102,7 @@
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="The Hunger Games - Songbirds and Snakes"
+                 android:text="@string/title_peli1"
                  android:textSize="20sp"
                  android:textStyle="bold"
                  android:elegantTextHeight="true"
@@ -71,7 +116,7 @@
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="142.2 mins"
+                 android:text="@string/duration_peli1"
                  android:textSize="20sp"
                  android:textStyle="bold"
                  android:elegantTextHeight="true"
@@ -91,7 +136,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:src="@drawable/boleto"
-                     android:contentDescription="Comprar Entrada"
+                     android:contentDescription="@string/comprar_entrada"
                      android:layout_marginBottom="100dp"
                      android:backgroundTint="@color/transparent"
                      android:id="@+id/peli1tiket"
@@ -115,7 +160,7 @@
          app:cardUseCompatPadding="true"
          android:id="@+id/peli2"
          android:onClick="onClick"
-         android:contentDescription="peliCard2"
+         android:contentDescription="@string/desc_pelicard2"
          >
          <LinearLayout
              android:layout_width="match_parent"
@@ -130,7 +175,7 @@
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="Digimon Adventure 02: The Beginning"
+                 android:text="@string/title_peli2"
                  android:textSize="20sp"
                  android:textStyle="bold"
                  android:elegantTextHeight="true"
@@ -144,7 +189,7 @@
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="76.2 mins"
+                 android:text="@string/duration_peli2"
                  android:textSize="20sp"
                  android:textStyle="bold"
                  android:elegantTextHeight="true"
@@ -164,7 +209,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:src="@drawable/boleto"
-                     android:contentDescription="Comprar Entrada"
+                     android:contentDescription="@string/comprar_entrada"
                      android:layout_marginBottom="100dp"
                      android:backgroundTint="@color/transparent"
                      android:id="@+id/peli2tiket"
@@ -188,7 +233,7 @@
          app:cardUseCompatPadding="true"
          android:id="@+id/peli3"
          android:onClick="onClick"
-         android:contentDescription="peliCard3"
+         android:contentDescription="@string/desc_pelicard3"
          >
          <LinearLayout
              android:layout_width="match_parent"
@@ -203,7 +248,7 @@
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="La Navidad en sus Manos"
+                 android:text="@string/title_peli3"
                  android:textSize="20sp"
                  android:textStyle="bold"
                  android:elegantTextHeight="true"
@@ -217,7 +262,7 @@
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="81 mins"
+                 android:text="@string/duration_peli3"
                  android:textSize="20sp"
                  android:textStyle="bold"
                  android:elegantTextHeight="true"
@@ -237,7 +282,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:src="@drawable/boleto"
-                     android:contentDescription="Comprar Entrada"
+                     android:contentDescription="@string/comprar_entrada"
                      android:layout_marginBottom="100dp"
                      android:backgroundTint="@color/transparent"
                      android:id="@+id/peli3tiket"
@@ -261,7 +306,7 @@
          app:cardUseCompatPadding="true"
          android:id="@+id/peli4"
          android:onClick="onClick"
-         android:contentDescription="peliCard4"
+         android:contentDescription="@string/desc_pelicard4"
          >
          <LinearLayout
              android:layout_width="match_parent"
@@ -276,7 +321,7 @@
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="La Patrulls Canina: La SuperPelícula"
+                 android:text="@string/title_peli4"
                  android:textSize="20sp"
                  android:textStyle="bold"
                  android:elegantTextHeight="true"
@@ -290,7 +335,7 @@
              <TextView
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
-                 android:text="79.2 mins"
+                 android:text="@string/duration_peli4"
                  android:textSize="20sp"
                  android:textStyle="bold"
                  android:elegantTextHeight="true"
@@ -310,7 +355,7 @@
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:src="@drawable/boleto"
-                     android:contentDescription="Comprar Entrada"
+                     android:contentDescription="@string/comprar_entrada"
                      android:layout_marginBottom="100dp"
                      android:backgroundTint="@color/transparent"
                      android:id="@+id/peli4tiket"
