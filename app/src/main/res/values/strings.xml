@@ -1,4 +1,5 @@
 <resources>
+    <!-- Home -->
     <string name="app_name">GranCentre_vitom</string>
     <string name="contentDescHotels">Hotel image</string>
     <string name="contentDescMovies">Movie image</string>
@@ -6,10 +7,49 @@
     <string name="contentDescTransport">Transport image</string>
     <string name="contentDescBusiness">Business image</string>
     <string name="contentDescEvents">Events image</string>
+
+    <!-- Nav -->
     <string name="contentDescConfig">Config image</string>
     <string name="contentDescBack">Back image</string>
     <string name="contentDescHome">Home image</string>
-    <string name="deixa_el_teu_comentari">Deixa el teu comentari...</string>
+
+    <!-- Peliculas -->
+    <string name="deixa_el_teu_comentari">Deixa el teu comentari…</string>
+    <string name="comprar_entrada">Comprar Entrada</string>
+    <string name="totes_les_pelis">TOTES LES PEL·LÍCULES</string>
+    <string name="desc_pelicard1">peliCard 1</string>
+    <string name="title_peli1">The Hunger Games - Songbirds and Snakes</string>
+    <string name="duration_peli1">142.2 mins</string>
+    <string name="desc_pelicard2">peliCard2</string>
+    <string name="title_peli2">Digimon Adventure 02: The Beginning</string>
+    <string name="duration_peli2">76.2 mins</string>
+    <string name="desc_pelicard3">peliCard3</string>
+    <string name="title_peli3">La Navidad en sus Manos</string>
+    <string name="duration_peli3">81 mins</string>
+    <string name="desc_pelicard4">peliCard4</string>
+    <string name="title_peli4">La Patrulls Canina: La SuperPelícula</string>
+    <string name="duration_peli4">79.2 mins</string>
+    <string name="horario_de_apertura">HORARIO DE APERTURA</string>
+    <string name="lunes_a_jueves_abierto_de_15_30_a_1_00">lunes a jueves : Abierto de 15:30 a 1:00</string>
+    <string name="viernes_abierto_de_15_30_a_2_30">viernes : Abierto de 15:30 a 2:30</string>
+    <string name="s_bado_abierto_de_12_00_a_2_00">sábado : Abierto de 12:00 a 2:00</string>
+    <string name="domingo_abierto_de_12_00_a_1_00">domingo : Abierto de 12:00 a 1:00</string>
+
+
+    <!-- Restaurants -->
+    <string name="logo_hotel">Logo Hotel</string>
+    <string name="_5_estrellas">5 estrellas</string>
+    <string name="telefono_de_contacto">Telefono de contacto</string>
+    <string name="bot_n_llamar">Botón Llamar</string>
+    <string name="trucar">Trucar</string>
+    <string name="bot_n_website">Botón WebSite</string>
+    <string name="p_gina_web">Pàgina Web</string>
+    <string name="bot_n_mapa">Botón Mapa</string>
+    <string name="ubicaci">Ubicació</string>
+    <string name="enviar_ressenya">Enviar Ressenya</string>
+
+
+    <!-- Arrays -->
     <string-array name="restaurantTypes">
         <item> Tots </item>
         <item> Esmorzars </item>
@@ -17,6 +57,7 @@
         <item> Mexica </item>
         <item> Restaurants </item>
     </string-array>
+
     <string-array name="businessCategories">
         <item>Todos</item>
         <item>Belleza</item>
@@ -26,12 +67,14 @@
         <item>Juguetes</item>
         <item>Moda</item>
     </string-array>
+
     <string-array name="eventCategories">
         <item>Todos</item>
         <item>Exposiciones</item>
         <item>Festivales</item>
         <item>Conciertos</item>
     </string-array>
+
     <string-array name="starsIc">
         <item>Tots</item>
         <item>⭐</item>
@@ -40,4 +83,5 @@
         <item>⭐⭐⭐⭐</item>
         <item>⭐⭐⭐⭐⭐</item>
     </string-array>
+
 </resources>

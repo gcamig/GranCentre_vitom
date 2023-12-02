@@ -22,7 +22,7 @@
             android:layout_height="130dp"
             android:id="@+id/hotel_img"
             android:padding="5dp"
-            android:contentDescription="Logo Hotel"
+            android:contentDescription="@string/logo_hotel"
             android:backgroundTint="@color/white"
             />
         <LinearLayout
@@ -36,20 +36,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textSize="30sp"></TextView>
+                android:textSize="30sp"/>
 
             <TextView
                 android:id="@+id/hotel_stars"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5 estrellas"
+                android:text="@string/_5_estrellas"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/hotel_tel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Telefono de contacto"
+                android:text="@string/telefono_de_contacto"
                 android:textSize="20sp" />
         </LinearLayout>
 
@@ -73,11 +73,11 @@
                 android:src="@drawable/call"
                 android:background="#254441"
                 android:layout_marginHorizontal="10dp"
-                android:contentDescription="Botón Llamar"/>
+                android:contentDescription="@string/bot_n_llamar"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trucar"
+                android:text="@string/trucar"
                 android:textSize="20sp"/>
         </LinearLayout>
         <LinearLayout
@@ -93,11 +93,11 @@
                 android:src="@drawable/web"
                 android:background="#254441"
                 android:layout_marginHorizontal="10dp"
-                android:contentDescription="Botón WebSite"/>
+                android:contentDescription="@string/bot_n_website"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pàgina Web"
+                android:text="@string/p_gina_web"
                 android:textSize="20sp"/>
         </LinearLayout>
     </LinearLayout>
@@ -116,11 +116,11 @@
             android:src="@drawable/map"
             android:background="#254441"
             android:layout_marginHorizontal="10dp"
-            android:contentDescription="Botón Mapa"/>
+            android:contentDescription="@string/bot_n_mapa"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ubicació"
+            android:text="@string/ubicaci"
             android:textSize="20sp"/>
     </LinearLayout>
     <androidx.cardview.widget.CardView
@@ -160,8 +160,7 @@
                 android:inputType="textMultiLine"
                 android:lines="4"
                 android:gravity="center"
-
-                />
+                android:autofillHints="" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -169,7 +168,7 @@
                 android:layout_gravity="center"
                 android:layout_marginVertical="5dp"
                 android:id="@+id/btEnviarComent"
-                android:text="Enviar Ressenya"
+                android:text="@string/enviar_ressenya"
                 android:backgroundTint="@color/green"
                 android:layout_marginTop="2dp"
                 android:gravity="center"/>
